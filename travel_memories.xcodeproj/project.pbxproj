@@ -15,6 +15,7 @@
 		551A6FFD28345AB400FDE95A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551A6FFB28345AB400FDE95A /* LaunchScreen.storyboard */; };
 		ED9EDE792835A745001B7E98 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9EDE782835A745001B7E98 /* MoreViewController.swift */; };
 		EDFD85C0283E958F0010B32F /* SubImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFD85BF283E958F0010B32F /* SubImagesCollectionViewCell.swift */; };
+		EDFD85C2283EB7E20010B32F /* v1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EDFD85C1283EB7E20010B32F /* v1.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		551A6FFE28345AB400FDE95A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED9EDE782835A745001B7E98 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		EDFD85BF283E958F0010B32F /* SubImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubImagesCollectionViewCell.swift; sourceTree = "<group>"; };
+		EDFD85C1283EB7E20010B32F /* v1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = v1.mp4; path = ../../../../../../v1.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,7 @@
 		551A6FEF28345AB100FDE95A /* travel_memories */ = {
 			isa = PBXGroup;
 			children = (
-				ED9EDE7A2835A8D3001B7E98 /* res */,
+				ED9EDE7A2835A8D3001B7E98 /* videos */,
 				551A6FF028345AB100FDE95A /* AppDelegate.swift */,
 				551A6FF228345AB100FDE95A /* SceneDelegate.swift */,
 				551A6FF428345AB100FDE95A /* ViewController.swift */,
@@ -74,11 +76,12 @@
 			path = travel_memories;
 			sourceTree = "<group>";
 		};
-		ED9EDE7A2835A8D3001B7E98 /* res */ = {
+		ED9EDE7A2835A8D3001B7E98 /* videos */ = {
 			isa = PBXGroup;
 			children = (
+				EDFD85C1283EB7E20010B32F /* v1.mp4 */,
 			);
-			path = res;
+			path = videos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +145,7 @@
 				551A6FFD28345AB400FDE95A /* LaunchScreen.storyboard in Resources */,
 				551A6FFA28345AB400FDE95A /* Assets.xcassets in Resources */,
 				551A6FF828345AB100FDE95A /* Main.storyboard in Resources */,
+				EDFD85C2283EB7E20010B32F /* v1.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
