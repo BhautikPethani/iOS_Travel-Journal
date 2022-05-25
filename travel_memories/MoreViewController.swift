@@ -7,6 +7,8 @@
 
 import MediaPlayer
 import UIKit
+import AVKit
+import AVFoundation
 
 class MoreViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -29,11 +31,27 @@ class MoreViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var imagesCollectionView: UICollectionView!
     var subImages = ["Tajmahal_1","Tajmahal_2","Tajmahal_3"];
     
+    var player = AVPlayer();
+    var playerViewController = AVPlayerViewController();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imagesCollectionView.delegate = self;
         imagesCollectionView.dataSource = self;
     }
-
+    
+    @IBAction func playVideo(_ sender: UIButton) {
+        let selectedVideo = "v1";
+        
+        let videoPath = Bundle.main.path(forResource: selectedVideo, ofType: "mp4");
+        let videoPathURL = URL(fileURLWithPath: videoPath!);
+        player = AVPlayer(url: videoPathURL);
+        playerViewController.player = player;
+        
+        self.present(playerViewController, animated: true, completion: {
+            self.playerViewController.player?.play();
+        });
+    }
+    
 }
