@@ -35,7 +35,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ydy-fA-EZc">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1350"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TajMahal_Image" translatesAutoresizingMaskIntoConstraints="NO" id="fzG-Uz-Atf">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="271"/>
@@ -113,6 +113,27 @@ University and student-filled cafes. It's also known for its bookshops, includin
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXT-o8-9Hw" userLabel="Location Label">
+                                                <rect key="frame" x="22" y="984" width="94" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gbh-BR-NDy" userLabel="Map Container">
+                                                <rect key="frame" x="22" y="1041" width="363" height="196"/>
+                                                <subviews>
+                                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lev-u5-Zbs">
+                                                        <rect key="frame" x="0.0" y="0.0" width="363" height="196"/>
+                                                    </mapView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="Lev-u5-Zbs" firstAttribute="top" secondItem="Gbh-BR-NDy" secondAttribute="top" id="4ul-gX-pTl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Lev-u5-Zbs" secondAttribute="trailing" id="GcN-Zx-ddw"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Lev-u5-Zbs" secondAttribute="bottom" id="O3B-hg-ZUp"/>
+                                                    <constraint firstItem="Lev-u5-Zbs" firstAttribute="leading" secondItem="Gbh-BR-NDy" secondAttribute="leading" id="xwK-ao-0p3"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -120,15 +141,21 @@ University and student-filled cafes. It's also known for its bookshops, includin
                                             <constraint firstItem="fzG-Uz-Atf" firstAttribute="top" secondItem="Ydy-fA-EZc" secondAttribute="top" id="5N4-HA-LmJ"/>
                                             <constraint firstItem="iKU-Dr-Jxj" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="5k4-ds-Mwv"/>
                                             <constraint firstItem="YXi-dk-cxe" firstAttribute="centerY" secondItem="fzG-Uz-Atf" secondAttribute="centerY" id="63f-rH-bh7"/>
+                                            <constraint firstItem="Gbh-BR-NDy" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="7HD-Q1-lAh"/>
                                             <constraint firstAttribute="trailing" secondItem="mdv-jA-srV" secondAttribute="trailing" constant="29" id="9Bb-gJ-cgs"/>
-                                            <constraint firstAttribute="height" constant="1200" id="NaM-r5-q1i"/>
+                                            <constraint firstItem="Gbh-BR-NDy" firstAttribute="top" secondItem="jXT-o8-9Hw" secondAttribute="bottom" constant="28" id="9CH-fs-PA7"/>
+                                            <constraint firstItem="jXT-o8-9Hw" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="MqD-aw-5u8"/>
+                                            <constraint firstAttribute="height" constant="1350" id="NaM-r5-q1i"/>
                                             <constraint firstAttribute="trailing" secondItem="hnB-91-DHg" secondAttribute="trailing" constant="29" id="Oa3-fn-ScC"/>
                                             <constraint firstItem="YXi-dk-cxe" firstAttribute="centerX" secondItem="fzG-Uz-Atf" secondAttribute="centerX" id="Sj1-T5-B0D"/>
+                                            <constraint firstAttribute="bottom" secondItem="Gbh-BR-NDy" secondAttribute="bottom" constant="113" id="UAB-im-Zq0"/>
                                             <constraint firstItem="7LI-1h-Wcq" firstAttribute="top" secondItem="hnB-91-DHg" secondAttribute="bottom" constant="35" id="UJX-ZK-Dbz"/>
+                                            <constraint firstItem="jXT-o8-9Hw" firstAttribute="top" secondItem="mdv-jA-srV" secondAttribute="bottom" constant="37" id="Ztd-WN-YhX"/>
                                             <constraint firstItem="LxF-G7-G81" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="fMd-cL-z7L"/>
                                             <constraint firstItem="iKU-Dr-Jxj" firstAttribute="top" secondItem="fzG-Uz-Atf" secondAttribute="bottom" constant="24" id="fxr-ZW-Dxu"/>
                                             <constraint firstAttribute="trailing" secondItem="fzG-Uz-Atf" secondAttribute="trailing" id="jPP-iI-c2s"/>
                                             <constraint firstItem="LxF-G7-G81" firstAttribute="top" secondItem="iKU-Dr-Jxj" secondAttribute="bottom" constant="2" id="meK-e3-v2I"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gbh-BR-NDy" secondAttribute="trailing" constant="29" id="r4X-PM-Lnh"/>
                                             <constraint firstItem="hnB-91-DHg" firstAttribute="top" secondItem="LxF-G7-G81" secondAttribute="bottom" constant="33" id="t4p-QD-c7E"/>
                                             <constraint firstItem="mdv-jA-srV" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="uEr-9p-fKH"/>
                                             <constraint firstItem="hnB-91-DHg" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="v3A-k6-YCx"/>
