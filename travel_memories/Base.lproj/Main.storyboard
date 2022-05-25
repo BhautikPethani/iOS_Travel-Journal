@@ -66,23 +66,31 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="40" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnB-91-DHg" userLabel="Description Label">
-                                                <rect key="frame" x="22" y="384" width="363" height="193.5"/>
+                                                <rect key="frame" x="22" y="384" width="363" height="183"/>
                                                 <string key="text">The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1632 by the Mughal .
 
 University and student-filled cafes. It's also known for its bookshops, including the famed Shakespeare &amp; Company. Family-friendly attractions include the Jardin des.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.55165379993694352" green="0.55165379993694352" blue="0.55165379993694352" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7LI-1h-Wcq" userLabel="Memories Label">
+                                                <rect key="frame" x="22" y="602" width="108" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="7LI-1h-Wcq" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="1Ot-S9-AsD"/>
                                             <constraint firstItem="fzG-Uz-Atf" firstAttribute="top" secondItem="Ydy-fA-EZc" secondAttribute="top" id="5N4-HA-LmJ"/>
                                             <constraint firstItem="iKU-Dr-Jxj" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="5k4-ds-Mwv"/>
                                             <constraint firstItem="YXi-dk-cxe" firstAttribute="centerY" secondItem="fzG-Uz-Atf" secondAttribute="centerY" id="63f-rH-bh7"/>
                                             <constraint firstAttribute="height" constant="1200" id="NaM-r5-q1i"/>
                                             <constraint firstAttribute="trailing" secondItem="hnB-91-DHg" secondAttribute="trailing" constant="29" id="Oa3-fn-ScC"/>
                                             <constraint firstItem="YXi-dk-cxe" firstAttribute="centerX" secondItem="fzG-Uz-Atf" secondAttribute="centerX" id="Sj1-T5-B0D"/>
+                                            <constraint firstItem="7LI-1h-Wcq" firstAttribute="top" secondItem="hnB-91-DHg" secondAttribute="bottom" constant="35" id="UJX-ZK-Dbz"/>
                                             <constraint firstItem="LxF-G7-G81" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="fMd-cL-z7L"/>
                                             <constraint firstItem="iKU-Dr-Jxj" firstAttribute="top" secondItem="fzG-Uz-Atf" secondAttribute="bottom" constant="24" id="fxr-ZW-Dxu"/>
                                             <constraint firstAttribute="trailing" secondItem="fzG-Uz-Atf" secondAttribute="trailing" id="jPP-iI-c2s"/>
