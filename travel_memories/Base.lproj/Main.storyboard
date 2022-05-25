@@ -1,24 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UWN-Jl-FeD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="travel_memories" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-207" y="-445"/>
+        </scene>
+        <!--More View Controller-->
+        <scene sceneID="Rn1-lx-WDn">
+            <objects>
+                <viewController id="UWN-Jl-FeD" customClass="MoreViewController" customModule="travel_memories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fGR-y8-af3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SKj-eF-mNJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ydy-fA-EZc">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TajMahal_Image" translatesAutoresizingMaskIntoConstraints="NO" id="fzG-Uz-Atf">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="271"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="271" id="Hy0-gI-2PQ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXi-dk-cxe" userLabel="Play Button">
+                                                <rect key="frame" x="178.5" y="107.5" width="57" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="57" id="FGw-X7-OZ1"/>
+                                                    <constraint firstAttribute="height" constant="56" id="Pbf-mc-bMb"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button" image="play-button"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taj Mahal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKU-Dr-Jxj" userLabel="Title Label">
+                                                <rect key="frame" x="22" y="295" width="128" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Jan 2022 - Mar 2022)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxF-G7-G81" userLabel="Sub Title">
+                                                <rect key="frame" x="22" y="333" width="153.5" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="40" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnB-91-DHg" userLabel="Description Label">
+                                                <rect key="frame" x="22" y="384" width="363" height="193.5"/>
+                                                <string key="text">The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1632 by the Mughal .
+
+University and student-filled cafes. It's also known for its bookshops, including the famed Shakespeare &amp; Company. Family-friendly attractions include the Jardin des.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.55165379993694352" green="0.55165379993694352" blue="0.55165379993694352" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="fzG-Uz-Atf" firstAttribute="top" secondItem="Ydy-fA-EZc" secondAttribute="top" id="5N4-HA-LmJ"/>
+                                            <constraint firstItem="iKU-Dr-Jxj" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="5k4-ds-Mwv"/>
+                                            <constraint firstItem="YXi-dk-cxe" firstAttribute="centerY" secondItem="fzG-Uz-Atf" secondAttribute="centerY" id="63f-rH-bh7"/>
+                                            <constraint firstAttribute="height" constant="1200" id="NaM-r5-q1i"/>
+                                            <constraint firstAttribute="trailing" secondItem="hnB-91-DHg" secondAttribute="trailing" constant="29" id="Oa3-fn-ScC"/>
+                                            <constraint firstItem="YXi-dk-cxe" firstAttribute="centerX" secondItem="fzG-Uz-Atf" secondAttribute="centerX" id="Sj1-T5-B0D"/>
+                                            <constraint firstItem="LxF-G7-G81" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="fMd-cL-z7L"/>
+                                            <constraint firstItem="iKU-Dr-Jxj" firstAttribute="top" secondItem="fzG-Uz-Atf" secondAttribute="bottom" constant="24" id="fxr-ZW-Dxu"/>
+                                            <constraint firstAttribute="trailing" secondItem="fzG-Uz-Atf" secondAttribute="trailing" id="jPP-iI-c2s"/>
+                                            <constraint firstItem="LxF-G7-G81" firstAttribute="top" secondItem="iKU-Dr-Jxj" secondAttribute="bottom" constant="2" id="meK-e3-v2I"/>
+                                            <constraint firstItem="hnB-91-DHg" firstAttribute="top" secondItem="LxF-G7-G81" secondAttribute="bottom" constant="33" id="t4p-QD-c7E"/>
+                                            <constraint firstItem="hnB-91-DHg" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="v3A-k6-YCx"/>
+                                            <constraint firstItem="fzG-Uz-Atf" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" id="wZ9-aF-o8K"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ydy-fA-EZc" firstAttribute="width" secondItem="vNu-wr-4Xw" secondAttribute="width" id="1wd-jI-Adb"/>
+                                    <constraint firstItem="Ydy-fA-EZc" firstAttribute="top" secondItem="w7S-Lg-Fh5" secondAttribute="top" id="5AS-iG-LJO"/>
+                                    <constraint firstItem="Ydy-fA-EZc" firstAttribute="trailing" secondItem="w7S-Lg-Fh5" secondAttribute="trailing" id="fk8-dm-Lf9"/>
+                                    <constraint firstItem="Ydy-fA-EZc" firstAttribute="leading" secondItem="w7S-Lg-Fh5" secondAttribute="leading" id="pi6-e4-4Og"/>
+                                    <constraint firstItem="Ydy-fA-EZc" firstAttribute="bottom" secondItem="w7S-Lg-Fh5" secondAttribute="bottom" id="vq0-uh-yGZ"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="w7S-Lg-Fh5"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="vNu-wr-4Xw"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vC8-2Z-Hhk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SKj-eF-mNJ" firstAttribute="top" secondItem="fGR-y8-af3" secondAttribute="top" id="KvR-vd-Zvx"/>
+                            <constraint firstItem="SKj-eF-mNJ" firstAttribute="leading" secondItem="vC8-2Z-Hhk" secondAttribute="leading" id="Lkc-1f-RKJ"/>
+                            <constraint firstAttribute="bottom" secondItem="SKj-eF-mNJ" secondAttribute="bottom" id="RUN-sT-dF4"/>
+                            <constraint firstItem="SKj-eF-mNJ" firstAttribute="trailing" secondItem="vC8-2Z-Hhk" secondAttribute="trailing" id="emN-D7-YZn"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Epo-Pn-ghg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505.79710144927537" y="-444.64285714285711"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TajMahal_Image" width="3761" height="2821"/>
+        <image name="play-button" width="512" height="512"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
