@@ -6,24 +6,44 @@
 //
 
 import UIKit
+import UniformTypeIdentifiers
 
 class AddFormViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    @objc func fileSelectorAction(gestureReconizer: UITapGestureRecognizer) {
+        if gestureReconizer.state == .ended {
+            let pickerController = UIImagePickerController()
+            pickerController.delegate = self
+            pickerController.mediaTypes = ["public.image"]
+            pickerController.sourceType = .photoLibrary
+            present(pickerController, animated: true)
+        }
+        
     }
     
 
-    /*
-    // MARK: - Navigation
+    @IBOutlet weak var uploadMediaView: UIView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.fileSelectorAction))
+        uploadMediaView.addGestureRecognizer(tapGestureRecognizer)
     }
-    */
 
+}
+
+extension AddFormViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        guard let media = info.first else { return }
+        print(media.value)
+
+        dismiss(animated: true)
+    }
+    
+    
+//    func getDocumentsDirectory() -> URL {
+//        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+//        return paths[0]
+//    }
 }

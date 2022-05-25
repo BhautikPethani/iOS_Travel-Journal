@@ -300,6 +300,7 @@ your travel journal</string>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <gestureRecognizers/>
                                             </view>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Egz-eb-i1X">
                                                 <rect key="frame" x="20" y="721" width="388" height="220"/>
@@ -347,6 +348,9 @@ your travel journal</string>
                             <constraint firstAttribute="bottom" secondItem="5hQ-b8-3ms" secondAttribute="bottom" id="fdP-3l-lE9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="uploadMediaView" destination="zVA-lZ-SCi" id="Nz5-El-yP3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inh-o1-xMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
