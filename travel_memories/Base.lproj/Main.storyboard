@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -54,7 +55,7 @@
                                                 <state key="normal" title="Button" image="play-button"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taj Mahal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKU-Dr-Jxj" userLabel="Title Label">
-                                                <rect key="frame" x="22" y="295" width="128" height="36"/>
+                                                <rect key="frame" x="22" y="295" width="127.5" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -80,6 +81,39 @@ University and student-filled cafes. It's also known for its bookshops, includin
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mdv-jA-srV" userLabel="Images Collection View">
+                                                <rect key="frame" x="22" y="648" width="363" height="299"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="299" id="s0h-Lc-HNe"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h41-Zf-2ue">
+                                                    <size key="itemSize" width="166" height="154"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3mS-RN-1ps" userLabel="PlaceImages" customClass="SubImagesCollectionViewCell" customModule="travel_memories" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="166" height="154"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jbk-q1-8By">
+                                                            <rect key="frame" x="0.0" y="0.0" width="166" height="154"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kc1-xz-j9Y">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="166" height="154"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="166" height="154"/>
+                                                        <connections>
+                                                            <outlet property="SubImage" destination="kc1-xz-j9Y" id="kv5-tU-5vj"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -87,6 +121,7 @@ University and student-filled cafes. It's also known for its bookshops, includin
                                             <constraint firstItem="fzG-Uz-Atf" firstAttribute="top" secondItem="Ydy-fA-EZc" secondAttribute="top" id="5N4-HA-LmJ"/>
                                             <constraint firstItem="iKU-Dr-Jxj" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="5k4-ds-Mwv"/>
                                             <constraint firstItem="YXi-dk-cxe" firstAttribute="centerY" secondItem="fzG-Uz-Atf" secondAttribute="centerY" id="63f-rH-bh7"/>
+                                            <constraint firstAttribute="trailing" secondItem="mdv-jA-srV" secondAttribute="trailing" constant="29" id="9Bb-gJ-cgs"/>
                                             <constraint firstAttribute="height" constant="1200" id="NaM-r5-q1i"/>
                                             <constraint firstAttribute="trailing" secondItem="hnB-91-DHg" secondAttribute="trailing" constant="29" id="Oa3-fn-ScC"/>
                                             <constraint firstItem="YXi-dk-cxe" firstAttribute="centerX" secondItem="fzG-Uz-Atf" secondAttribute="centerX" id="Sj1-T5-B0D"/>
@@ -96,8 +131,10 @@ University and student-filled cafes. It's also known for its bookshops, includin
                                             <constraint firstAttribute="trailing" secondItem="fzG-Uz-Atf" secondAttribute="trailing" id="jPP-iI-c2s"/>
                                             <constraint firstItem="LxF-G7-G81" firstAttribute="top" secondItem="iKU-Dr-Jxj" secondAttribute="bottom" constant="2" id="meK-e3-v2I"/>
                                             <constraint firstItem="hnB-91-DHg" firstAttribute="top" secondItem="LxF-G7-G81" secondAttribute="bottom" constant="33" id="t4p-QD-c7E"/>
+                                            <constraint firstItem="mdv-jA-srV" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="uEr-9p-fKH"/>
                                             <constraint firstItem="hnB-91-DHg" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="v3A-k6-YCx"/>
                                             <constraint firstItem="fzG-Uz-Atf" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" id="wZ9-aF-o8K"/>
+                                            <constraint firstItem="mdv-jA-srV" firstAttribute="top" secondItem="7LI-1h-Wcq" secondAttribute="bottom" constant="17" id="xWO-yz-SPk"/>
                                         </constraints>
                                     </view>
                                 </subviews>

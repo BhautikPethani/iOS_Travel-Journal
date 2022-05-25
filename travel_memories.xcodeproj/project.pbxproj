@@ -14,6 +14,7 @@
 		551A6FFA28345AB400FDE95A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 551A6FF928345AB400FDE95A /* Assets.xcassets */; };
 		551A6FFD28345AB400FDE95A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551A6FFB28345AB400FDE95A /* LaunchScreen.storyboard */; };
 		ED9EDE792835A745001B7E98 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9EDE782835A745001B7E98 /* MoreViewController.swift */; };
+		EDFD85C0283E958F0010B32F /* SubImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFD85BF283E958F0010B32F /* SubImagesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		551A6FFC28345AB400FDE95A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		551A6FFE28345AB400FDE95A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED9EDE782835A745001B7E98 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		EDFD85BF283E958F0010B32F /* SubImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				551A6FF928345AB400FDE95A /* Assets.xcassets */,
 				551A6FFB28345AB400FDE95A /* LaunchScreen.storyboard */,
 				551A6FFE28345AB400FDE95A /* Info.plist */,
+				EDFD85BF283E958F0010B32F /* SubImagesCollectionViewCell.swift */,
 			);
 			path = travel_memories;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				551A6FF128345AB100FDE95A /* AppDelegate.swift in Sources */,
 				ED9EDE792835A745001B7E98 /* MoreViewController.swift in Sources */,
 				551A6FF328345AB100FDE95A /* SceneDelegate.swift in Sources */,
+				EDFD85C0283E958F0010B32F /* SubImagesCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
