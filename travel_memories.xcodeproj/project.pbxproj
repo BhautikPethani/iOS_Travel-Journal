@@ -13,6 +13,7 @@
 		551A6FF828345AB100FDE95A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551A6FF628345AB100FDE95A /* Main.storyboard */; };
 		551A6FFA28345AB400FDE95A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 551A6FF928345AB400FDE95A /* Assets.xcassets */; };
 		551A6FFD28345AB400FDE95A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551A6FFB28345AB400FDE95A /* LaunchScreen.storyboard */; };
+		552E2B5D283EB47D00AF581E /* AddFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E2B5C283EB47D00AF581E /* AddFormViewController.swift */; };
 		ED9EDE792835A745001B7E98 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9EDE782835A745001B7E98 /* MoreViewController.swift */; };
 		EDFD85C0283E958F0010B32F /* SubImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFD85BF283E958F0010B32F /* SubImagesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		551A6FF928345AB400FDE95A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		551A6FFC28345AB400FDE95A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		551A6FFE28345AB400FDE95A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		552E2B5C283EB47D00AF581E /* AddFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFormViewController.swift; sourceTree = "<group>"; };
 		ED9EDE782835A745001B7E98 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		EDFD85BF283E958F0010B32F /* SubImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +72,7 @@
 				551A6FFB28345AB400FDE95A /* LaunchScreen.storyboard */,
 				551A6FFE28345AB400FDE95A /* Info.plist */,
 				EDFD85BF283E958F0010B32F /* SubImagesCollectionViewCell.swift */,
+				552E2B5C283EB47D00AF581E /* AddFormViewController.swift */,
 			);
 			path = travel_memories;
 			sourceTree = "<group>";
@@ -97,6 +100,8 @@
 			dependencies = (
 			);
 			name = travel_memories;
+			packageProductDependencies = (
+			);
 			productName = travel_memories;
 			productReference = 551A6FED28345AB100FDE95A /* travel_memories.app */;
 			productType = "com.apple.product-type.application";
@@ -125,6 +130,8 @@
 				Base,
 			);
 			mainGroup = 551A6FE428345AB100FDE95A;
+			packageReferences = (
+			);
 			productRefGroup = 551A6FEE28345AB100FDE95A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -154,6 +161,7 @@
 			files = (
 				551A6FF528345AB100FDE95A /* ViewController.swift in Sources */,
 				551A6FF128345AB100FDE95A /* AppDelegate.swift in Sources */,
+				552E2B5D283EB47D00AF581E /* AddFormViewController.swift in Sources */,
 				ED9EDE792835A745001B7E98 /* MoreViewController.swift in Sources */,
 				551A6FF328345AB100FDE95A /* SceneDelegate.swift in Sources */,
 				EDFD85C0283E958F0010B32F /* SubImagesCollectionViewCell.swift in Sources */,
