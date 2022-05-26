@@ -65,16 +65,14 @@
 			isa = PBXGroup;
 			children = (
 				552E2B64283EE02600AF581E /* videos */,
+				EDA46145283FEA99007B273C /* Controller */,
+				EDA46146283FEAF7007B273C /* Model */,
+				EDA46147283FEB09007B273C /* View */,
+				EDA46148283FEB54007B273C /* Componants */,
 				551A6FF028345AB100FDE95A /* AppDelegate.swift */,
 				551A6FF228345AB100FDE95A /* SceneDelegate.swift */,
-				551A6FF428345AB100FDE95A /* ViewController.swift */,
-				ED9EDE782835A745001B7E98 /* MoreViewController.swift */,
-				551A6FF628345AB100FDE95A /* Main.storyboard */,
 				551A6FF928345AB400FDE95A /* Assets.xcassets */,
-				551A6FFB28345AB400FDE95A /* LaunchScreen.storyboard */,
 				551A6FFE28345AB400FDE95A /* Info.plist */,
-				EDFD85BF283E958F0010B32F /* SubImagesCollectionViewCell.swift */,
-				552E2B5C283EB47D00AF581E /* AddFormViewController.swift */,
 			);
 			path = travel_memories;
 			sourceTree = "<group>";
@@ -85,6 +83,40 @@
 				552E2B62283EE00900AF581E /* v1.mp4 */,
 			);
 			path = videos;
+			sourceTree = "<group>";
+		};
+		EDA46145283FEA99007B273C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				551A6FF428345AB100FDE95A /* ViewController.swift */,
+				ED9EDE782835A745001B7E98 /* MoreViewController.swift */,
+				552E2B5C283EB47D00AF581E /* AddFormViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EDA46146283FEAF7007B273C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EDA46147283FEB09007B273C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				551A6FF628345AB100FDE95A /* Main.storyboard */,
+				551A6FFB28345AB400FDE95A /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDA46148283FEB54007B273C /* Componants */ = {
+			isa = PBXGroup;
+			children = (
+				EDFD85BF283E958F0010B32F /* SubImagesCollectionViewCell.swift */,
+			);
+			path = Componants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
