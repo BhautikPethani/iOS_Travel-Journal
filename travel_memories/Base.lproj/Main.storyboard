@@ -110,6 +110,11 @@ University and student-filled cafes. It's also known for its bookshops, includin
                                                             </subviews>
                                                         </view>
                                                         <size key="customSize" width="167" height="154"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outlet property="SubImage" destination="kc1-xz-j9Y" id="kv5-tU-5vj"/>
                                                         </connections>
@@ -127,6 +132,11 @@ University and student-filled cafes. It's also known for its bookshops, includin
                                                 <subviews>
                                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lev-u5-Zbs">
                                                         <rect key="frame" x="0.0" y="0.0" width="377" height="196.33333333333334"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </mapView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
