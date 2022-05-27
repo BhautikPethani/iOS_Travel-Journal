@@ -15,6 +15,8 @@
 		551A6FFD28345AB400FDE95A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551A6FFB28345AB400FDE95A /* LaunchScreen.storyboard */; };
 		552E2B5D283EB47D00AF581E /* AddFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E2B5C283EB47D00AF581E /* AddFormViewController.swift */; };
 		552E2B63283EE00900AF581E /* v1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 552E2B62283EE00900AF581E /* v1.mp4 */; };
+		7C2B914E284063F400632536 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2B914D284063F400632536 /* Places.swift */; };
+		7C2B9150284064EC00632536 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2B914F284064EC00632536 /* PlacesTableViewCell.swift */; };
 		ED9EDE792835A745001B7E98 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9EDE782835A745001B7E98 /* MoreViewController.swift */; };
 		EDFD85C0283E958F0010B32F /* SubImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFD85BF283E958F0010B32F /* SubImagesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +32,8 @@
 		551A6FFE28345AB400FDE95A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		552E2B5C283EB47D00AF581E /* AddFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFormViewController.swift; sourceTree = "<group>"; };
 		552E2B62283EE00900AF581E /* v1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = v1.mp4; sourceTree = "<group>"; };
+		7C2B914D284063F400632536 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
+		7C2B914F284064EC00632536 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
 		ED9EDE782835A745001B7E98 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		EDFD85BF283E958F0010B32F /* SubImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +95,7 @@
 				551A6FF428345AB100FDE95A /* ViewController.swift */,
 				ED9EDE782835A745001B7E98 /* MoreViewController.swift */,
 				552E2B5C283EB47D00AF581E /* AddFormViewController.swift */,
+				7C2B914F284064EC00632536 /* PlacesTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 		EDA46146283FEAF7007B273C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7C2B914D284063F400632536 /* Places.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,10 +203,12 @@
 			files = (
 				551A6FF528345AB100FDE95A /* ViewController.swift in Sources */,
 				551A6FF128345AB100FDE95A /* AppDelegate.swift in Sources */,
+				7C2B914E284063F400632536 /* Places.swift in Sources */,
 				552E2B5D283EB47D00AF581E /* AddFormViewController.swift in Sources */,
 				ED9EDE792835A745001B7E98 /* MoreViewController.swift in Sources */,
 				551A6FF328345AB100FDE95A /* SceneDelegate.swift in Sources */,
 				EDFD85C0283E958F0010B32F /* SubImagesCollectionViewCell.swift in Sources */,
+				7C2B9150284064EC00632536 /* PlacesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
