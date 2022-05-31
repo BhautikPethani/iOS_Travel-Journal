@@ -179,9 +179,15 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         }
         placeModel = PlacesModel(id: "", name: placeName.text!, shortDescription: shortDescription.text!, latitude: Location[0], longitude: Location[1], media: finalMedia)
         JournalDataManager.shared.saveNewPlace(place: placeModel!)
-        navigationController?.popViewController(animated: true)
+        
+        performSegue(withIdentifier: "saved", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "saved"{
+            _ = segue.destination as? ViewController
+        }
+    }
     
     @IBAction func selectVideoFile(_ sender: UIButton) {
         addVideoBtn = sender
