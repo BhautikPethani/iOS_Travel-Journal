@@ -22,7 +22,7 @@ class PlacesCell: UITableViewCell {
     @IBOutlet weak var placeName: UILabel!
     
     
-    @IBOutlet weak var placeDesp: UILabel!
+    @IBOutlet weak var placeDesp: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,7 +40,6 @@ class PlacesCell: UITableViewCell {
         let documentDirectorPath:String = paths[0]
         let imagesDirectoryPath = documentDirectorPath.appending("/ImagePicker")
         if let m = Cobject.media.first?.originalUrl {
-            print("Path : " + m)
             if let data = FileManager.default.contents(atPath: imagesDirectoryPath.appending("/" + m)) {
                 placeImage.image = UIImage(data: data)
             }
