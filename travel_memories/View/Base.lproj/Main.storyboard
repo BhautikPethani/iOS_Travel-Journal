@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Whp-7w-Fm7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -64,7 +64,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="plus.circle" catalog="system" imagePlacement="leading" title="Add a new journal" imagePadding="5" cornerStyle="capsule"/>
                                 <connections>
-                                    <action selector="addJournal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5kU-Sl-NPu"/>
+                                    <segue destination="fv4-6H-Cnn" kind="show" id="kc7-Z8-CFM"/>
                                 </connections>
                             </button>
                             <searchBar contentMode="redraw" placeholder="search for a place" translatesAutoresizingMaskIntoConstraints="NO" id="h26-mf-rKb">
@@ -80,7 +80,7 @@
                             <constraint firstItem="h26-mf-rKb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="o8Y-v8-Z8P"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="jSb-rp-XDZ"/>
+                    <navigationItem key="navigationItem" id="Nwp-ub-Eaw"/>
                     <connections>
                         <outlet property="searchBar" destination="h26-mf-rKb" id="yjE-Ok-G6G"/>
                         <outlet property="tableview" destination="5EE-Ka-rTp" id="S7h-G8-gGH"/>
@@ -270,7 +270,7 @@ University and student-filled cafes. It's also known for its bookshops, includin
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Epo-Pn-ghg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1415.9420289855072" y="-444.64285714285711"/>
+            <point key="canvasLocation" x="1513.0434782608697" y="-42.1875"/>
         </scene>
         <!--Add Form View Controller-->
         <scene sceneID="Qot-Qv-FS9">
@@ -506,6 +506,7 @@ your travel journal</string>
                             <constraint firstAttribute="bottom" secondItem="5hQ-b8-3ms" secondAttribute="bottom" id="fdP-3l-lE9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="h6x-HV-jTp"/>
                     <connections>
                         <outlet property="imagesCollectionView" destination="yVw-kA-Whu" id="uwb-CX-gXt"/>
                         <outlet property="map" destination="Egz-eb-i1X" id="m1G-2H-V6g"/>
@@ -518,23 +519,23 @@ your travel journal</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inh-o1-xMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="-445.3125"/>
+            <point key="canvasLocation" x="1513.0434782608697" y="-827.00892857142856"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="SJu-Ox-x71">
+        <scene sceneID="7ZU-Bt-Sgy">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qxh-T6-6E1" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Whp-7w-Fm7" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hUG-sV-VwK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="30p-Or-gfh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BoD-uy-EeR"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lyU-fB-RYI"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tEK-ve-r6H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b6w-wT-E3I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-207.24637681159422" y="-445.3125"/>
         </scene>

@@ -36,16 +36,18 @@ class PlacesCell: UITableViewCell {
     }
     func setplacecell(Cobject : PlacesModel)
     {
-            print(Cobject.media.count)
-            if let m = Cobject.media.first?.originalUrl {
-            let data = FileManager.default.contents(atPath: m)
-            print(m)
-            placeImage.image = UIImage(data: data! as Data)
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentDirectorPath:String = paths[0]
+        let imagesDirectoryPath = documentDirectorPath.appending("/ImagePicker")
+        if let m = Cobject.media.first?.originalUrl {
+            print("Path : " + m)
+            if let data = FileManager.default.contents(atPath: imagesDirectoryPath.appending("/" + m)) {
+                placeImage.image = UIImage(data: data)
+            }
         }
-        
-       
         placeName.text = Cobject.name
-        placeDesp.text = Cobject.shortDescription    }
+        placeDesp.text = Cobject.shortDescription
+    }
     
     
 }

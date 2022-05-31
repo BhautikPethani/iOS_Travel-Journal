@@ -25,6 +25,7 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     var locationMnager = CLLocationManager()
     var destination: CLLocationCoordinate2D!
     var media = [String]();
+    var imagesDirectoryPath: String?
     
     // Location[0] would be latitude and Location[1] would be longitude
     var Location: [Double] = [0.0, 0.0]
@@ -49,6 +50,19 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         imagesCollectionView.delegate = self;
         imagesCollectionView.dataSource = self;
         videoFileName.isHidden = true
+        
+        
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentDirectorPath:String = paths[0]
+        imagesDirectoryPath = documentDirectorPath.appending("/ImagePicker")
+        let isExist = FileManager.default.fileExists(atPath: imagesDirectoryPath!)
+        if isExist == false{
+          do{
+              try FileManager.default.createDirectory(at: URL(fileURLWithPath: imagesDirectoryPath!), withIntermediateDirectories: true)
+            }catch{
+              print("Something went wrong while creating a new folder")
+            }
+        }
     }
     
     
@@ -58,8 +72,10 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: "PlaceImages", for: indexPath) as! SubImagesCollectionViewCell
-        let data = FileManager.default.contents(atPath: self.media[indexPath.row])
-        cell.SubImage.image = UIImage(data: data! as Data)
+//        let data = FileManager.default.contents(atPath: self.media[indexPath.row])
+        print(imagesDirectoryPath!.appending("/" + self.media[indexPath.row]))
+        let data = FileManager.default.contents(atPath: imagesDirectoryPath!.appending("/" + self.media[indexPath.row]))
+        cell.SubImage.image = UIImage(data: data!)
         return cell
     }
     
@@ -155,6 +171,7 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
             finalMedia.append(UploadedMediaModel(originalUrl: videoFileURL!, mediaType: 1))
         }
         placeModel = PlacesModel(id: "", name: placeName.text!, shortDescription: shortDescription.text!, latitude: Location[0], longitude: Location[1], media: finalMedia)
+        JournalDataManager.shared.saveNewPlace(place: placeModel!)
         navigationController?.popViewController(animated: true)
     }
     
@@ -178,16 +195,26 @@ extension AddFormViewController: UIImagePickerControllerDelegate, UINavigationCo
             videoFileName.isHidden = false
             addVideoBtn.isHidden = true
             videoFileName.text =  media.lastPathComponent
-            videoFileURL = media.path
+            videoFileURL = media.lastPathComponent
+            copyMedia(path: media.path!, filename: media.lastPathComponent!)
         } else {
             guard let media = info[.imageURL] as? NSURL else { return }
-            self.media.append(media.path!)
+            copyMedia(path: media.path!, filename: media.lastPathComponent!)
+            self.media.append(media.lastPathComponent!)
             imagesCollectionView.isHidden = false
             self.imagesCollectionView.reloadData()
             noMediaView.isHidden = true
         }
         dismiss(animated: true)
         
+    }
+    
+    func copyMedia(path: String, filename: String) {
+        if let data = FileManager.default.contents(atPath: path) {
+            let imagePath = imagesDirectoryPath!.appending("/\(filename)")
+            let success = FileManager.default.createFile(atPath: imagePath, contents: data, attributes: nil)
+            print("Copied : " + String(success))
+        }
     }
     
 }
