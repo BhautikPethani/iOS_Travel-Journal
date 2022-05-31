@@ -143,22 +143,24 @@ struct PlacesModel {
 }
 
 struct UploadedMediaModel {
-    var thumbnailUrl: String
     var originalUrl: String
     var mediaType: Int // 0 -> Photo , 1 -> Video
     
     func getDictionary() -> [String: Any] {
         var dict = [String: Any]()
-        dict["thumbnailUrl"] = thumbnailUrl
         dict["originalUrl"] = originalUrl
         dict["mediaType"] = mediaType
         return dict
     }
     
     init(_ json: JSON = JSON()) {
-        thumbnailUrl = json["thumbnailUrl"].stringValue
         originalUrl = json["originalUrl"].stringValue
         mediaType = json["mediaType"].intValue
+    }
+    
+    init(originalUrl: String, mediaType: Int) {
+        self.originalUrl = originalUrl;
+        self.mediaType = mediaType
     }
 }
     

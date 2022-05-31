@@ -9,17 +9,20 @@ import UIKit
 import UniformTypeIdentifiers
 import MapKit
 
-class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
-    
+class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate,  UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
     var placeModel: PlacesModel? = nil
     
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var placeName: UITextField!
     @IBOutlet weak var shortDescription: UITextView!
     @IBOutlet weak var uploadMediaView: UIView!
+    @IBOutlet weak var noMediaView: UIView!
+    @IBOutlet weak var imagesCollectionView: UICollectionView!
     
     var locationMnager = CLLocationManager()
     var destination: CLLocationCoordinate2D!
+    var media = [String]();
     
     // Location[0] would be latitude and Location[1] would be longitude
     var Location: [Double] = [0.0, 0.0]
@@ -40,6 +43,27 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         // Upload media config
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.fileSelectorAction))
         uploadMediaView.addGestureRecognizer(tapGestureRecognizer)
+        
+        imagesCollectionView.delegate = self;
+        imagesCollectionView.dataSource = self;
+
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.media.count;
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print(indexPath.row);
+        let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: "PlaceImages", for: indexPath) as! SubImagesCollectionViewCell
+        let data = FileManager.default.contents(atPath: self.media[indexPath.row])
+        cell.SubImage.image = UIImage(data: data! as Data)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width:157, height: 145)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -119,9 +143,13 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
             present(pickerController, animated: true)
         }
     }
+    
     @IBAction func addNewPlaceToJournal(_ sender: Any) {
-        placeModel = PlacesModel(id: "", name: placeName.text!, shortDescription: shortDescription.text!, latitude: Location[0], longitude: Location[1], media: [])
-        print(placeModel!.name, " + ", placeModel!.shortDescription)
+        var finalMedia = [UploadedMediaModel]();
+        for m in self.media {
+            finalMedia.append(UploadedMediaModel(originalUrl: m, mediaType: 0))
+        }
+        placeModel = PlacesModel(id: "", name: placeName.text!, shortDescription: shortDescription.text!, latitude: Location[0], longitude: Location[1], media: finalMedia)
     }
     
 }
@@ -129,17 +157,13 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
 extension AddFormViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        guard let media = info.first else { return }
-        print(media.value)
-
+        guard let media = info[.imageURL] as? NSURL else { return }
+        self.media.append(media.path!)
+        imagesCollectionView.isHidden = false
+        self.imagesCollectionView.reloadData()
+        noMediaView.isHidden = true
         dismiss(animated: true)
     }
-    
-    
-//    func getDocumentsDirectory() -> URL {
-//        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-//        return paths[0]
-//    }
 }
 
 extension ViewController: MKMapViewDelegate {
