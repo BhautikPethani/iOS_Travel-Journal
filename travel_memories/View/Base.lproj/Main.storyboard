@@ -373,7 +373,7 @@ University and student-filled cafes. It's also known for its bookshops, includin
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload media" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUq-ih-KJY">
-                                                                <rect key="frame" x="62" y="54" width="108" height="21"/>
+                                                                <rect key="frame" x="62" y="53" width="108" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                 <color key="tintColor" systemColor="systemGray5Color"/>
                                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
@@ -470,10 +470,30 @@ your travel journal</string>
                                                             <action selector="selectVideoFile:" destination="fv4-6H-Cnn" eventType="touchUpInside" id="cZ2-B2-KAM"/>
                                                         </connections>
                                                     </button>
+                                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ycx-9I-bdx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="160"/>
+                                                    </imageView>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAn-q1-hWX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="160"/>
+                                                        <color key="tintColor" red="0.96078431610000004" green="0.96078431610000004" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="play.circle.fill" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="playBtnAction:" destination="fv4-6H-Cnn" eventType="touchUpInside" id="YBA-N5-fEs"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Ycx-9I-bdx" secondAttribute="trailing" id="78X-FZ-L4B"/>
+                                                    <constraint firstItem="MAn-q1-hWX" firstAttribute="leading" secondItem="mpN-uq-e1Q" secondAttribute="leading" id="BWN-ZS-fzL"/>
                                                     <constraint firstAttribute="height" constant="160" id="YcU-9K-KH7"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MAn-q1-hWX" secondAttribute="trailing" id="c3L-fz-NH6"/>
+                                                    <constraint firstItem="Ycx-9I-bdx" firstAttribute="top" secondItem="mpN-uq-e1Q" secondAttribute="top" id="eUz-9e-0Vg"/>
+                                                    <constraint firstAttribute="bottom" secondItem="MAn-q1-hWX" secondAttribute="bottom" id="fv1-U0-AOj"/>
+                                                    <constraint firstItem="Ycx-9I-bdx" firstAttribute="leading" secondItem="mpN-uq-e1Q" secondAttribute="leading" id="hbd-f0-8N6"/>
+                                                    <constraint firstItem="MAn-q1-hWX" firstAttribute="top" secondItem="mpN-uq-e1Q" secondAttribute="top" id="noR-YZ-zLZ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Ycx-9I-bdx" secondAttribute="bottom" id="o92-b8-dJY"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -535,8 +555,10 @@ your travel journal</string>
                         <outlet property="map" destination="Egz-eb-i1X" id="m1G-2H-V6g"/>
                         <outlet property="noMediaView" destination="LWm-Al-1aY" id="tNs-EX-y3J"/>
                         <outlet property="placeName" destination="FKR-Zu-Wmo" id="Qlv-6p-aaS"/>
+                        <outlet property="playBtn" destination="MAn-q1-hWX" id="Rdc-fn-SOS"/>
                         <outlet property="shortDescription" destination="Q2r-Uk-a9G" id="nac-Eg-CKO"/>
                         <outlet property="uploadMediaView" destination="zVA-lZ-SCi" id="PMB-pk-DXV"/>
+                        <outlet property="videoThumbnailImageView" destination="Ycx-9I-bdx" id="ynd-mD-Vg5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inh-o1-xMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -565,6 +587,7 @@ your travel journal</string>
     <resources>
         <image name="TajMahal_Image" width="3761" height="2821"/>
         <image name="play-button" width="512" height="512"/>
+        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">

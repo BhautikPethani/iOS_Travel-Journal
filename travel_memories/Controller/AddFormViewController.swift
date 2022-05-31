@@ -8,6 +8,7 @@
 import UIKit
 import UniformTypeIdentifiers
 import MapKit
+import AVKit
 
 class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate,  UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
@@ -19,8 +20,13 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     @IBOutlet weak var uploadMediaView: UIView!
     @IBOutlet weak var noMediaView: UIView!
     @IBOutlet weak var imagesCollectionView: UICollectionView!
-    @IBOutlet weak var videoFileName: UILabel!
+    @IBOutlet weak var videoThumbnailImageView: UIImageView!
+    
+    @IBOutlet weak var playBtn: UIButton!
+    
     var videoFileURL: String?
+    var videoFileLink: URL?
+    
     var addVideoBtn: UIButton!
     var locationMnager = CLLocationManager()
     var destination: CLLocationCoordinate2D!
@@ -50,6 +56,7 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         imagesCollectionView.delegate = self;
         imagesCollectionView.dataSource = self;
 //        videoFileName.isHidden = true
+        videoThumbnailImageView.isHidden = true
         
         
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
@@ -184,6 +191,15 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         present(pickerController, animated: true)
     }
     
+    @IBAction func playBtnAction(_ sender: UIButton) {
+        let videoURL = videoFileLink
+        let player = AVPlayer(url: videoURL!)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.present(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
+    }
 }
 
 
@@ -193,8 +209,30 @@ extension AddFormViewController: UIImagePickerControllerDelegate, UINavigationCo
         if type == "public.movie" {
             guard let media = info[.mediaURL] as? NSURL else { return }
 //            videoFileName.isHidden = false
+            videoThumbnailImageView.isHidden = false
+            playBtn.isHidden = false
+            
+            DispatchQueue.global().async {
+             let asset = AVAsset(url: media as URL)
+                self.videoFileLink = media as URL
+             let assetImgGenerate : AVAssetImageGenerator = AVAssetImageGenerator(asset: asset)
+             assetImgGenerate.appliesPreferredTrackTransform = true
+                let time = CMTimeMake(value: 1, timescale: 2)
+             let img = try? assetImgGenerate.copyCGImage(at: time, actualTime: nil)
+             if img != nil {
+                            let frameImg  = UIImage(cgImage: img!)
+                            DispatchQueue.main.async(execute: {
+                            // assign your image to UIImageView
+                                
+                                self.videoThumbnailImageView.image = frameImg
+                                self.videoThumbnailImageView.contentMode = .scaleAspectFill
+                            })
+                    }
+            }
+            
             addVideoBtn.isHidden = true
 //            videoFileName.text =  media.lastPathComponent
+            
             videoFileURL = media.lastPathComponent
             copyMedia(path: media.path!, filename: media.lastPathComponent!)
         } else {
