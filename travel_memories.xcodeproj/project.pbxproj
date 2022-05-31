@@ -9,15 +9,16 @@
 /* Begin PBXBuildFile section */
 		551A6FF128345AB100FDE95A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A6FF028345AB100FDE95A /* AppDelegate.swift */; };
 		551A6FF328345AB100FDE95A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A6FF228345AB100FDE95A /* SceneDelegate.swift */; };
-		551A6FF528345AB100FDE95A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A6FF428345AB100FDE95A /* ViewController.swift */; };
+		551A6FF528345AB100FDE95A /* JournalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A6FF428345AB100FDE95A /* JournalsViewController.swift */; };
 		551A6FF828345AB100FDE95A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551A6FF628345AB100FDE95A /* Main.storyboard */; };
 		551A6FFA28345AB400FDE95A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 551A6FF928345AB400FDE95A /* Assets.xcassets */; };
 		551A6FFD28345AB400FDE95A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551A6FFB28345AB400FDE95A /* LaunchScreen.storyboard */; };
 		552E2B5D283EB47D00AF581E /* AddFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E2B5C283EB47D00AF581E /* AddFormViewController.swift */; };
 		7C15F36F28459FA70077C5EC /* PlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15F36E28459FA70077C5EC /* PlacesCell.swift */; };
 		87B060962845897E002B5F2C /* JournalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B060952845897E002B5F2C /* JournalDataManager.swift */; };
+		87B060982846A942002B5F2C /* AppUserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B060972846A942002B5F2C /* AppUserDefaultsManager.swift */; };
 		8C1E467335569461679C9D2D /* Pods_travel_memories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAAF9C884D14A8E9DDE7810E /* Pods_travel_memories.framework */; };
-		ED9EDE792835A745001B7E98 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9EDE782835A745001B7E98 /* MoreViewController.swift */; };
+		ED9EDE792835A745001B7E98 /* JournalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9EDE782835A745001B7E98 /* JournalDetailViewController.swift */; };
 		EDFD85C0283E958F0010B32F /* SubImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFD85BF283E958F0010B32F /* SubImagesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +27,7 @@
 		551A6FED28345AB100FDE95A /* travel_memories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = travel_memories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		551A6FF028345AB100FDE95A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		551A6FF228345AB100FDE95A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		551A6FF428345AB100FDE95A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		551A6FF428345AB100FDE95A /* JournalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalsViewController.swift; sourceTree = "<group>"; };
 		551A6FF728345AB100FDE95A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		551A6FF928345AB400FDE95A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		551A6FFC28345AB400FDE95A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,9 +35,10 @@
 		552E2B5C283EB47D00AF581E /* AddFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFormViewController.swift; sourceTree = "<group>"; };
 		7C15F36E28459FA70077C5EC /* PlacesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesCell.swift; sourceTree = "<group>"; };
 		87B060952845897E002B5F2C /* JournalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalDataManager.swift; sourceTree = "<group>"; };
+		87B060972846A942002B5F2C /* AppUserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserDefaultsManager.swift; sourceTree = "<group>"; };
 		A5104509304116AA1F1DA0FE /* Pods-travel_memories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travel_memories.release.xcconfig"; path = "Target Support Files/Pods-travel_memories/Pods-travel_memories.release.xcconfig"; sourceTree = "<group>"; };
 		BAAF9C884D14A8E9DDE7810E /* Pods_travel_memories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_travel_memories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED9EDE782835A745001B7E98 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		ED9EDE782835A745001B7E98 /* JournalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailViewController.swift; sourceTree = "<group>"; };
 		EDFD85BF283E958F0010B32F /* SubImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,8 +107,8 @@
 		EDA46145283FEA99007B273C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				551A6FF428345AB100FDE95A /* ViewController.swift */,
-				ED9EDE782835A745001B7E98 /* MoreViewController.swift */,
+				551A6FF428345AB100FDE95A /* JournalsViewController.swift */,
+				ED9EDE782835A745001B7E98 /* JournalDetailViewController.swift */,
 				552E2B5C283EB47D00AF581E /* AddFormViewController.swift */,
 			);
 			path = Controller;
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				87B060952845897E002B5F2C /* JournalDataManager.swift */,
+				87B060972846A942002B5F2C /* AppUserDefaultsManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,12 +256,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				551A6FF528345AB100FDE95A /* ViewController.swift in Sources */,
+				551A6FF528345AB100FDE95A /* JournalsViewController.swift in Sources */,
 				551A6FF128345AB100FDE95A /* AppDelegate.swift in Sources */,
 				87B060962845897E002B5F2C /* JournalDataManager.swift in Sources */,
+				87B060982846A942002B5F2C /* AppUserDefaultsManager.swift in Sources */,
 				552E2B5D283EB47D00AF581E /* AddFormViewController.swift in Sources */,
 				7C15F36F28459FA70077C5EC /* PlacesCell.swift in Sources */,
-				ED9EDE792835A745001B7E98 /* MoreViewController.swift in Sources */,
+				ED9EDE792835A745001B7E98 /* JournalDetailViewController.swift in Sources */,
 				551A6FF328345AB100FDE95A /* SceneDelegate.swift in Sources */,
 				EDFD85C0283E958F0010B32F /* SubImagesCollectionViewCell.swift in Sources */,
 			);
@@ -408,7 +412,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 55BY82L73C;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = travel_memories/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Travel Memories";
@@ -416,6 +420,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -424,7 +429,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.anchal.bhauthik.swapnil.vir.travel-memories";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aanchal.bhauthik.swapnil.vir.travel-memories";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -440,7 +445,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 55BY82L73C;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = travel_memories/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Travel Memories";
@@ -448,6 +453,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -456,7 +462,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.anchal.bhauthik.swapnil.vir.travel-memories";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aanchal.bhauthik.swapnil.vir.travel-memories";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

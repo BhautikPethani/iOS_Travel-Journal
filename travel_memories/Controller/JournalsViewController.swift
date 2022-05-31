@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSource , UISearchBarDelegate{
+class JournalsViewController: UIViewController , UITableViewDelegate , UITableViewDataSource , UISearchBarDelegate{
     var imagesDirectoryPath: String?
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -25,7 +25,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "MoreView") as! MoreViewController
+        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "MoreView") as! JournalDetailViewController
        
         nextViewController.placeModel = filteredData[indexPath.section]
         nextViewController.media = filteredData[indexPath.section].media

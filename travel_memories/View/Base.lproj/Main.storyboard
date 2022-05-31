@@ -12,7 +12,7 @@
         <!--Journals-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Firstview" id="BYZ-38-t0r" customClass="ViewController" customModule="travel_memories" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Firstview" id="BYZ-38-t0r" customClass="JournalsViewController" customModule="travel_memories" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="702.89855072463774" y="-445.3125"/>
         </scene>
-        <!--More View Controller-->
+        <!--Journal Detail View Controller-->
         <scene sceneID="Rn1-lx-WDn">
             <objects>
-                <viewController storyboardIdentifier="MoreView" modalPresentationStyle="fullScreen" id="UWN-Jl-FeD" customClass="MoreViewController" customModule="travel_memories" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoreView" modalPresentationStyle="fullScreen" id="UWN-Jl-FeD" customClass="JournalDetailViewController" customModule="travel_memories" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fGR-y8-af3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
