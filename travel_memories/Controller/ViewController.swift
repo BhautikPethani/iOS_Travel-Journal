@@ -28,6 +28,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "MoreView") as! MoreViewController
        
         nextViewController.placeModel = filteredData[indexPath.section]
+        nextViewController.media = filteredData[indexPath.section].media
         navigationController?.pushViewController(nextViewController, animated: true)
     }
 

@@ -212,7 +212,7 @@ extension AddFormViewController: UIImagePickerControllerDelegate, UINavigationCo
     func copyMedia(path: String, filename: String) {
         if let data = FileManager.default.contents(atPath: path) {
             let imagePath = imagesDirectoryPath!.appending("/\(filename)")
-            let success = FileManager.default.createFile(atPath: imagePath, contents: data, attributes: nil)
+            _ = FileManager.default.createFile(atPath: imagePath, contents: data, attributes: nil)
         }
     }
     

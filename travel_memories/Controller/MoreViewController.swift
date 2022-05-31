@@ -14,14 +14,12 @@ class MoreViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return subImages.count;
+        return self.media.count - 1;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: "PlaceImages", for: indexPath) as! SubImagesCollectionViewCell
-//        let data = FileManager.default.contents(atPath: self.media[indexPath.row])
-        print(imagesDirectoryPath!.appending("/" + self.media[indexPath.row]))
-        let data = FileManager.default.contents(atPath: imagesDirectoryPath!.appending("/" + self.media[indexPath.row]))
+        let data = FileManager.default.contents(atPath: imagesDirectoryPath!.appending("/" + self.media[indexPath.row].originalUrl))
         cell.SubImage.image = UIImage(data: data!)
         return cell
     }
@@ -35,18 +33,31 @@ class MoreViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var placeName: UILabel!
     @IBOutlet weak var videoThumbnail: UIImageView!
     @IBOutlet weak var imagesCollectionView: UICollectionView!
-    var subImages = [UploadedMediaModel]();
     
-    var media: [UploadedMediaModel]? = nil
+    var media = [UploadedMediaModel]()
     var placeModel: PlacesModel? = nil
     var player = AVPlayer();
     var playerViewController = AVPlayerViewController();
+    var imagesDirectoryPath: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imagesCollectionView.delegate = self;
         imagesCollectionView.dataSource = self;
+        
+        
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentDirectorPath:String = paths[0]
+        imagesDirectoryPath = documentDirectorPath.appending("/ImagePicker")
+        let isExist = FileManager.default.fileExists(atPath: imagesDirectoryPath!)
+        if isExist == false{
+          do{
+              try FileManager.default.createDirectory(at: URL(fileURLWithPath: imagesDirectoryPath!), withIntermediateDirectories: true)
+            }catch{
+              print("Something went wrong while creating a new folder")
+            }
+        }
     }
     
     func setVideoView(){
