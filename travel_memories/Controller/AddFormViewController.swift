@@ -168,7 +168,36 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         }
     }
     
+    func showAlert(msg: String) {
+        let alert = UIAlertController(title: "Message", message: msg,
+                                          preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
+            
+        }));
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func addNewPlaceToJournal(_ sender: Any) {
+        
+        if (placeName!.text == nil || placeName.text?.trimming(spaces: .leadingAndTrailing) == "") {
+            showAlert(msg: "Please add valid place name")
+            return;
+        }
+        
+        if (shortDescription!.text == nil || shortDescription.text?.trimming(spaces: .leadingAndTrailing) == "") {
+            showAlert(msg: "Please add valid place description")
+            return;
+        }
+        
+        if (media.count > 3) {
+            showAlert(msg: "Please add at least 3 images")
+            return;
+        }
+        
+        if (videoFileURL == nil || videoFileURL?.trimming(spaces: .leadingAndTrailing) == "") {
+            showAlert(msg: "Please add video clip for place")
+            return;
+        }
         var finalMedia = [UploadedMediaModel]();
         for m in self.media {
             finalMedia.append(UploadedMediaModel(originalUrl: m, mediaType: 0))
@@ -180,13 +209,6 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         placeModel = PlacesModel(id: "", name: placeName.text!, shortDescription: shortDescription.text!, latitude: Location[0], longitude: Location[1], media: finalMedia, videoURL: videoFileLink)
         JournalDataManager.shared.saveNewPlace(place: placeModel!)
         navigationController?.popViewController(animated: true)
-//        performSegue(withIdentifier: "saved", sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "saved"{
-            _ = segue.destination as? ViewController
-        }
     }
     
     @IBAction func selectVideoFile(_ sender: UIButton) {
@@ -260,4 +282,47 @@ extension AddFormViewController: UIImagePickerControllerDelegate, UINavigationCo
         }
     }
     
+}
+
+
+extension String {
+    enum TrimmingOptions {
+        case all
+        case leading
+        case trailing
+        case leadingAndTrailing
+    }
+    
+    func trimming(spaces: TrimmingOptions, using characterSet: CharacterSet = .whitespacesAndNewlines) ->  String {
+        switch spaces {
+        case .all: return trimmingAllSpaces(using: characterSet)
+        case .leading: return trimingLeadingSpaces(using: characterSet)
+        case .trailing: return trimingTrailingSpaces(using: characterSet)
+        case .leadingAndTrailing:  return trimmingLeadingAndTrailingSpaces(using: characterSet)
+        }
+    }
+    
+    private func trimingLeadingSpaces(using characterSet: CharacterSet) -> String {
+        guard let index = firstIndex(where: { !CharacterSet(charactersIn: String($0)).isSubset(of: characterSet) }) else {
+            return self
+        }
+
+        return String(self[index...])
+    }
+    
+    private func trimingTrailingSpaces(using characterSet: CharacterSet) -> String {
+        guard let index = lastIndex(where: { !CharacterSet(charactersIn: String($0)).isSubset(of: characterSet) }) else {
+            return self
+        }
+
+        return String(self[...index])
+    }
+    
+    private func trimmingLeadingAndTrailingSpaces(using characterSet: CharacterSet) -> String {
+        return trimmingCharacters(in: characterSet)
+    }
+    
+    private func trimmingAllSpaces(using characterSet: CharacterSet) -> String {
+        return components(separatedBy: characterSet).joined()
+    }
 }
