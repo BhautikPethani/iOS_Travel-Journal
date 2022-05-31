@@ -20,7 +20,10 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     
     var locationMnager = CLLocationManager()
     var destination: CLLocationCoordinate2D!
-
+    
+    // Location[0] would be latitude and Location[1] would be longitude
+    var Location: [Double] = [0.0, 0.0]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,6 +51,9 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         let latitude = userLocation.coordinate.latitude
         let longitude = userLocation.coordinate.longitude
         
+        Location = [latitude, longitude];
+        print(Location)
+        
         displayLocation(latitude: latitude, longitude: longitude, title: "Current Location", subtitle: "You're Here")
     }
     
@@ -65,6 +71,10 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         let touchPoint = sender.location(in: map)
         let coordinate = map.convert(touchPoint, toCoordinateFrom: map)
         let annotation = MKPointAnnotation()
+        
+        Location = [coordinate.latitude, coordinate.longitude];
+        print(Location)
+        
         annotation.title = "Visited Place"
         annotation.coordinate = coordinate
         map.addAnnotation(annotation)
