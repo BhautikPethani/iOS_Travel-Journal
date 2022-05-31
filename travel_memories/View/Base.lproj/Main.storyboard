@@ -63,11 +63,17 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="plus.circle" catalog="system" imagePlacement="leading" title="Add a new journal" imagePadding="5" cornerStyle="capsule"/>
                             </button>
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="search for a place" translatesAutoresizingMaskIntoConstraints="NO" id="h26-mf-rKb">
+                                <rect key="frame" x="3" y="58" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="h26-mf-rKb" id="yjE-Ok-G6G"/>
                         <outlet property="tableview" destination="5EE-Ka-rTp" id="S7h-G8-gGH"/>
                     </connections>
                 </viewController>

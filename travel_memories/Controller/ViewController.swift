@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSource {
+class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSource , UISearchBarDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let placeObject = places[indexPath.section]
+        let placeObject = filteredData[indexPath.section]
         
         let cell = tableview.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PlacesCell
         cell.layer.cornerRadius=10 //set corner radius here
@@ -35,7 +35,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
        }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return places.count
+        return filteredData.count
     }
     
     func filldata()
@@ -47,12 +47,37 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         
     }
     var places : [Places] = []
-   // var filteredData : [Places] = []
+    var filteredData : [Places] = []
     
     @IBOutlet weak var tableview: UITableView!
     
     
-   
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText : String )
+    {
+        filteredData = []
+        
+                if searchText == ""
+                {
+                    filteredData = places
+                }
+        
+        
+        else
+        {
+            for i in 0..<places.count {
+                    if places[i].name.lowercased().contains(searchText.lowercased())
+                    {
+                        filteredData.append(places[i])
+                    }
+                }
+        }
+                self.tableview.reloadData()
+    }
+        
+    
+
 
     
     
@@ -62,13 +87,12 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
        
         tableview.delegate = self
         tableview.dataSource = self
-       // tableview.delegate = self
-        //tableview.dataSource = self
-        //searchBar.delegate = self
-       // filteredData = places
+      
+        searchBar.delegate = self
+       
         filldata()
         
-        
+        filteredData = places
     }
 
 }
