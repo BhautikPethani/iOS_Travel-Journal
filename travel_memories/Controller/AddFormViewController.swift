@@ -179,8 +179,8 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         }
         placeModel = PlacesModel(id: "", name: placeName.text!, shortDescription: shortDescription.text!, latitude: Location[0], longitude: Location[1], media: finalMedia)
         JournalDataManager.shared.saveNewPlace(place: placeModel!)
-        
-        performSegue(withIdentifier: "saved", sender: self)
+        navigationController?.popViewController(animated: true)
+//        performSegue(withIdentifier: "saved", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -71,6 +71,12 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         self.tableview.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        places = JournalDataManager.shared.getAllSavedPlaces()
+        filteredData = places
+        self.tableview.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
