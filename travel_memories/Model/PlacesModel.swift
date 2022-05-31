@@ -15,7 +15,7 @@ struct PlacesModel {
     var latitude: Double
     var longitude: Double
     var media: [UploadedMediaModel]
-    var videoURL: URL?
+    var videoURL: String?
     
     init(_ json: JSON = JSON()) {
         id = json["id"].stringValue
@@ -24,7 +24,7 @@ struct PlacesModel {
         latitude = json["latitude"].doubleValue
         longitude = json["longitude"].doubleValue
         media = json["media"].arrayValue.map({UploadedMediaModel($0)})
-        videoURL = URL(string: "")
+        videoURL = json["videoURL"].stringValue
     }
     
     init(id: String,
@@ -33,7 +33,7 @@ struct PlacesModel {
          latitude: Double,
          longitude: Double,
          media: [UploadedMediaModel],
-         videoURL: URL?) {
+         videoURL: String?) {
         self.id = id
         self.name = name
         self.shortDescription = shortDescription
@@ -51,6 +51,7 @@ struct PlacesModel {
         dict["latitude"] = latitude
         dict["longitude"] = longitude
         dict["media"] = media.map({$0.getDictionary()})
+        dict["videoURL"] = videoURL
         return dict
     }
 }

@@ -72,7 +72,7 @@ class JournalDetailViewController: UIViewController, UICollectionViewDelegate, U
     
     func setElements(){
    
-        if let url = placeModel!.videoURL {
+        if let url = URL(string: placeModel!.videoURL!) {
             DispatchQueue.global().async {
                 let asset = AVAsset(url: url)
              let assetImgGenerate : AVAssetImageGenerator = AVAssetImageGenerator(asset: asset)
@@ -89,11 +89,7 @@ class JournalDetailViewController: UIViewController, UICollectionViewDelegate, U
                             })
                     }
             }
-            
-            
         }
-        
-        
         
         placeName.text = placeModel!.name
         placeDescription.text = placeModel!.shortDescription
