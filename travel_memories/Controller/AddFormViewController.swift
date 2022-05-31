@@ -27,32 +27,30 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Map Configuration
         map.isZoomEnabled = true;
         map.showsUserLocation = true;
-        
         locationMnager.delegate = self;
         locationMnager.desiredAccuracy = kCLLocationAccuracyBest
         locationMnager.requestWhenInUseAuthorization()
         locationMnager.startUpdatingLocation()
-        
         map.delegate = self
+        singleTap()
         
+        // Upload media config
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.fileSelectorAction))
         uploadMediaView.addGestureRecognizer(tapGestureRecognizer)
-        singleTap()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         removePin()
-//        print(locations.count)
         let userLocation = locations[0]
         
         let latitude = userLocation.coordinate.latitude
         let longitude = userLocation.coordinate.longitude
         
         Location = [latitude, longitude];
-        print(Location)
         
         displayLocation(latitude: latitude, longitude: longitude, title: "Current Location", subtitle: "You're Here")
     }
@@ -73,7 +71,6 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         let annotation = MKPointAnnotation()
         
         Location = [coordinate.latitude, coordinate.longitude];
-        print(Location)
         
         annotation.title = "Visited Place"
         annotation.coordinate = coordinate
@@ -122,11 +119,11 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
             present(pickerController, animated: true)
         }
     }
-    
-    func saveJournal(){
-        
+    @IBAction func addNewPlaceToJournal(_ sender: Any) {
+        placeModel = PlacesModel(id: "", name: placeName.text!, shortDescription: shortDescription.text!, latitude: Location[0], longitude: Location[1], media: [])
+        print(placeModel!.name, " + ", placeModel!.shortDescription)
     }
-
+    
 }
 
 extension AddFormViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

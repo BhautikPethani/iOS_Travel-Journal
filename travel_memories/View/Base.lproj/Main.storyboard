@@ -378,6 +378,9 @@ University and student-filled cafes. It's also known for its bookshops, includin
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="addNewPlaceToJournal:" destination="fv4-6H-Cnn" eventType="touchUpInside" id="Mof-CG-YjB"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" id="1Hb-wd-qpT">
                                                 <rect key="frame" x="20" y="99" width="374" height="53"/>
