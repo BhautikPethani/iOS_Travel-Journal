@@ -103,38 +103,30 @@ struct PlacesModel {
     var id: String
     var name: String
     var shortDescription: String
-    var longDescription: String
     var latitude: Double
     var longitude: Double
-    var address: String
     var media: [UploadedMediaModel]
     
     init(_ json: JSON = JSON()) {
         id = json["id"].stringValue
         name = json["name"].stringValue
         shortDescription = json["shortDescription"].stringValue
-        longDescription = json["longDescription"].stringValue
         latitude = json["latitude"].doubleValue
         longitude = json["longitude"].doubleValue
-        address = json["address"].stringValue
         media = json["media"].arrayValue.map({UploadedMediaModel($0)})
     }
     
     init(id: String,
          name: String,
          shortDescription: String,
-         longDescription: String,
          latitude: Double,
          longitude: Double,
-         address: String,
          media: [UploadedMediaModel]) {
         self.id = id
         self.name = name
         self.shortDescription = shortDescription
-        self.longDescription = longDescription
         self.latitude = latitude
         self.longitude = longitude
-        self.address = address
         self.media = media
     }
     
@@ -143,10 +135,8 @@ struct PlacesModel {
         dict["id"] = id
         dict["name"] = name
         dict["shortDescription"] = shortDescription
-        dict["longDescription"] = longDescription
         dict["latitude"] = latitude
         dict["longitude"] = longitude
-        dict["address"] = address
         dict["media"] = media.map({$0.getDictionary()})
         return dict
     }
