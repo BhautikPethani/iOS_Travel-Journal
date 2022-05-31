@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Whp-7w-Fm7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Whp-7w-Fm7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -294,30 +294,26 @@ University and student-filled cafes. It's also known for its bookshops, includin
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="new journal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEb-Ls-dLy">
-                                                <rect key="frame" x="109" y="67" width="162" height="36"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="new journal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEb-Ls-dLy">
+                                                <rect key="frame" x="109" y="67" width="147.5" height="36"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
                                                 <color key="textColor" systemColor="systemBlueColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of the place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a15-3r-hDM">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a15-3r-hDM">
                                                 <rect key="frame" x="20" y="200" width="121" height="17"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Short descrintion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaj-zO-Utr">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaj-zO-Utr">
                                                 <rect key="frame" x="20" y="283" width="115" height="17"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drop your pin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Soo-xq-xcX">
-                                                <rect key="frame" x="20" y="658" width="90" height="17"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drop your pin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Soo-xq-xcX">
+                                                <rect key="frame" x="20" y="745" width="90" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -329,18 +325,17 @@ University and student-filled cafes. It's also known for its bookshops, includin
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zVA-lZ-SCi" userLabel="UploadMediaView">
-                                                <rect key="frame" x="20" y="372" width="374" height="192"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVA-lZ-SCi" userLabel="UploadMediaView">
+                                                <rect key="frame" x="20" y="374" width="374" height="171"/>
                                                 <subviews>
                                                     <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" id="yVw-kA-Whu" userLabel="Images Collection View">
-                                                        <rect key="frame" x="5" y="8" width="363" height="176"/>
+                                                        <rect key="frame" x="5" y="7" width="363" height="157"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="299" id="9QT-Jq-FLI"/>
+                                                            <constraint firstAttribute="height" constant="170" id="9QT-Jq-FLI"/>
                                                         </constraints>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZKh-WD-PCi">
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZKh-WD-PCi">
                                                             <size key="itemSize" width="166" height="154"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -348,7 +343,7 @@ University and student-filled cafes. It's also known for its bookshops, includin
                                                         </collectionViewFlowLayout>
                                                         <cells>
                                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlaceImages" id="dac-Nf-3b9" userLabel="PlaceImages" customClass="SubImagesCollectionViewCell" customModule="travel_memories" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="167" height="154"/>
+                                                                <rect key="frame" x="0.0" y="1.5" width="167" height="154"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                                     <rect key="frame" x="0.0" y="0.0" width="167" height="154"/>
@@ -374,7 +369,7 @@ University and student-filled cafes. It's also known for its bookshops, includin
                                                         </cells>
                                                     </collectionView>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LWm-Al-1aY" userLabel="NoMediaView">
-                                                        <rect key="frame" x="57" y="32" width="260" height="128"/>
+                                                        <rect key="frame" x="57" y="22" width="260" height="128"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload media" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUq-ih-KJY">
@@ -395,24 +390,31 @@ University and student-filled cafes. It's also known for its bookshops, includin
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="171" id="FVr-nL-nrJ"/>
+                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Egz-eb-i1X">
-                                                <rect key="frame" x="20" y="683" width="374" height="220"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Egz-eb-i1X">
+                                                <rect key="frame" x="20" y="770" width="374" height="160"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="160" id="wOP-7r-1Us"/>
+                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </mapView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVM-b9-dm8">
-                                                <rect key="frame" x="20" y="946" width="374" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVM-b9-dm8">
+                                                <rect key="frame" x="20" y="960" width="374" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="IHB-JJ-Lez"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled">
                                                     <attributedString key="attributedTitle">
@@ -428,7 +430,7 @@ University and student-filled cafes. It's also known for its bookshops, includin
                                                     <action selector="addNewPlaceToJournal:" destination="fv4-6H-Cnn" eventType="touchUpInside" id="Mof-CG-YjB"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" id="1Hb-wd-qpT">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" id="1Hb-wd-qpT">
                                                 <rect key="frame" x="20" y="99" width="374" height="53"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <constraints>
@@ -440,10 +442,12 @@ your travel journal</string>
                                                 <color key="textColor" systemColor="systemGray2Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Q2r-Uk-a9G">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Q2r-Uk-a9G">
                                                 <rect key="frame" x="20" y="308" width="374" height="46"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.94901961089999998" green="0.94901961089999998" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="46" id="GZx-Cz-GhI"/>
+                                                </constraints>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -453,12 +457,11 @@ your travel journal</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mpN-uq-e1Q" userLabel="UploadVideoMedia">
-                                                <rect key="frame" x="20" y="586" width="374" height="49"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpN-uq-e1Q" userLabel="UploadVideoMedia">
+                                                <rect key="frame" x="20" y="565" width="374" height="160"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3u-Ve-1Qx">
-                                                        <rect key="frame" x="46" y="10" width="283" height="31"/>
+                                                        <rect key="frame" x="46" y="55" width="283" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Button"/>
@@ -467,20 +470,42 @@ your travel journal</string>
                                                             <action selector="selectVideoFile:" destination="fv4-6H-Cnn" eventType="touchUpInside" id="cZ2-B2-KAM"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="File Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rih-Cd-3EB">
-                                                        <rect key="frame" x="0.0" y="14" width="366" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="160" id="YcU-9K-KH7"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="Q2r-Uk-a9G" firstAttribute="leading" secondItem="yaj-zO-Utr" secondAttribute="leading" id="0Eq-Gm-6Ez"/>
                                             <constraint firstAttribute="height" constant="1022" id="26l-S1-uj3"/>
+                                            <constraint firstAttribute="trailing" secondItem="Egz-eb-i1X" secondAttribute="trailing" constant="20" symbolic="YES" id="5cD-69-Kim"/>
+                                            <constraint firstAttribute="trailing" secondItem="mpN-uq-e1Q" secondAttribute="trailing" constant="20" symbolic="YES" id="6Gf-bR-Dt6"/>
+                                            <constraint firstItem="zVA-lZ-SCi" firstAttribute="leading" secondItem="rkC-7i-2OX" secondAttribute="leading" constant="20" symbolic="YES" id="8Ry-k2-gMt"/>
+                                            <constraint firstItem="mVM-b9-dm8" firstAttribute="centerX" secondItem="rkC-7i-2OX" secondAttribute="centerX" id="G3C-EV-BVL"/>
+                                            <constraint firstItem="yaj-zO-Utr" firstAttribute="leading" secondItem="FKR-Zu-Wmo" secondAttribute="leading" id="I1S-Mo-wzM"/>
+                                            <constraint firstAttribute="trailing" secondItem="zVA-lZ-SCi" secondAttribute="trailing" constant="20" symbolic="YES" id="IIB-nz-mPl"/>
+                                            <constraint firstItem="Egz-eb-i1X" firstAttribute="leading" secondItem="rkC-7i-2OX" secondAttribute="leading" constant="20" symbolic="YES" id="Mx8-AV-VDf"/>
+                                            <constraint firstItem="mpN-uq-e1Q" firstAttribute="top" secondItem="zVA-lZ-SCi" secondAttribute="bottom" constant="20" id="Ngt-zq-VhM"/>
+                                            <constraint firstItem="zVA-lZ-SCi" firstAttribute="top" secondItem="Q2r-Uk-a9G" secondAttribute="bottom" constant="20" id="NkI-cl-P8f"/>
+                                            <constraint firstItem="Egz-eb-i1X" firstAttribute="top" secondItem="Soo-xq-xcX" secondAttribute="bottom" constant="8" symbolic="YES" id="OS1-NE-RNk"/>
+                                            <constraint firstItem="a15-3r-hDM" firstAttribute="top" secondItem="1Hb-wd-qpT" secondAttribute="bottom" constant="48" id="OuC-sz-h0F"/>
+                                            <constraint firstItem="FKR-Zu-Wmo" firstAttribute="leading" secondItem="a15-3r-hDM" secondAttribute="leading" id="Qsg-zN-9QK"/>
+                                            <constraint firstItem="Soo-xq-xcX" firstAttribute="top" secondItem="mpN-uq-e1Q" secondAttribute="bottom" constant="20" id="Scz-8k-NhZ"/>
+                                            <constraint firstItem="UEb-Ls-dLy" firstAttribute="leading" secondItem="aud-MM-ISn" secondAttribute="trailing" constant="-2" id="T9Z-Re-d2Q"/>
+                                            <constraint firstItem="a15-3r-hDM" firstAttribute="leading" secondItem="rkC-7i-2OX" secondAttribute="leading" constant="20" symbolic="YES" id="TCN-F8-Mpy"/>
+                                            <constraint firstItem="mpN-uq-e1Q" firstAttribute="leading" secondItem="rkC-7i-2OX" secondAttribute="leading" constant="20" symbolic="YES" id="XvT-2i-G4b"/>
+                                            <constraint firstItem="yaj-zO-Utr" firstAttribute="top" secondItem="FKR-Zu-Wmo" secondAttribute="bottom" constant="24" id="Zhe-XC-QVq"/>
+                                            <constraint firstAttribute="trailing" secondItem="Q2r-Uk-a9G" secondAttribute="trailing" constant="20" symbolic="YES" id="aCk-AS-z8f"/>
+                                            <constraint firstItem="Soo-xq-xcX" firstAttribute="leading" secondItem="rkC-7i-2OX" secondAttribute="leading" constant="20" symbolic="YES" id="d10-vK-gA1"/>
+                                            <constraint firstItem="mVM-b9-dm8" firstAttribute="leading" secondItem="Egz-eb-i1X" secondAttribute="leading" id="fSx-mO-ebg"/>
+                                            <constraint firstItem="Q2r-Uk-a9G" firstAttribute="top" secondItem="yaj-zO-Utr" secondAttribute="bottom" constant="8" symbolic="YES" id="feO-fd-SmA"/>
+                                            <constraint firstItem="1Hb-wd-qpT" firstAttribute="top" secondItem="UEb-Ls-dLy" secondAttribute="bottom" constant="-4" id="l7v-16-wck"/>
+                                            <constraint firstItem="mVM-b9-dm8" firstAttribute="top" secondItem="Egz-eb-i1X" secondAttribute="bottom" constant="30" id="qqA-Gb-JXJ"/>
+                                            <constraint firstItem="UEb-Ls-dLy" firstAttribute="top" secondItem="rkC-7i-2OX" secondAttribute="top" constant="67" id="uSV-Wk-Ofb"/>
+                                            <constraint firstItem="FKR-Zu-Wmo" firstAttribute="top" secondItem="a15-3r-hDM" secondAttribute="bottom" constant="8" symbolic="YES" id="xnl-Zn-aeh"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -512,7 +537,6 @@ your travel journal</string>
                         <outlet property="placeName" destination="FKR-Zu-Wmo" id="Qlv-6p-aaS"/>
                         <outlet property="shortDescription" destination="Q2r-Uk-a9G" id="nac-Eg-CKO"/>
                         <outlet property="uploadMediaView" destination="zVA-lZ-SCi" id="PMB-pk-DXV"/>
-                        <outlet property="videoFileName" destination="Rih-Cd-3EB" id="Inh-9O-kre"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inh-o1-xMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -49,7 +49,7 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         
         imagesCollectionView.delegate = self;
         imagesCollectionView.dataSource = self;
-        videoFileName.isHidden = true
+//        videoFileName.isHidden = true
         
         
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
@@ -192,9 +192,9 @@ extension AddFormViewController: UIImagePickerControllerDelegate, UINavigationCo
         let type = info[.mediaType] as! String
         if type == "public.movie" {
             guard let media = info[.mediaURL] as? NSURL else { return }
-            videoFileName.isHidden = false
+//            videoFileName.isHidden = false
             addVideoBtn.isHidden = true
-            videoFileName.text =  media.lastPathComponent
+//            videoFileName.text =  media.lastPathComponent
             videoFileURL = media.lastPathComponent
             copyMedia(path: media.path!, filename: media.lastPathComponent!)
         } else {
