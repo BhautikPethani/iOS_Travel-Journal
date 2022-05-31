@@ -19,7 +19,10 @@ class MoreViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: "PlaceImages", for: indexPath) as! SubImagesCollectionViewCell
-        cell.SubImage.image=UIImage(named: subImages[indexPath.row])
+//        let data = FileManager.default.contents(atPath: self.media[indexPath.row])
+        print(imagesDirectoryPath!.appending("/" + self.media[indexPath.row]))
+        let data = FileManager.default.contents(atPath: imagesDirectoryPath!.appending("/" + self.media[indexPath.row]))
+        cell.SubImage.image = UIImage(data: data!)
         return cell
     }
     
@@ -28,9 +31,13 @@ class MoreViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
 
+    @IBOutlet weak var placeDescription: UILabel!
+    @IBOutlet weak var placeName: UILabel!
+    @IBOutlet weak var videoThumbnail: UIImageView!
     @IBOutlet weak var imagesCollectionView: UICollectionView!
-    var subImages = ["Tajmahal_1","Tajmahal_2","Tajmahal_3"];
+    var subImages = [UploadedMediaModel]();
     
+    var media: [UploadedMediaModel]? = nil
     var placeModel: PlacesModel? = nil
     var player = AVPlayer();
     var playerViewController = AVPlayerViewController();
@@ -40,6 +47,19 @@ class MoreViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         imagesCollectionView.delegate = self;
         imagesCollectionView.dataSource = self;
+    }
+    
+    func setVideoView(){
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentDirectorPath:String = paths[0]
+        let imagesDirectoryPath = documentDirectorPath.appending("/ImagePicker")
+        if let m = placeModel!.media.first?.originalUrl {
+            if let data = FileManager.default.contents(atPath: imagesDirectoryPath.appending("/" + m)) {
+                videoThumbnail.image = UIImage(data: data)
+            }
+        }
+        placeName.text = placeModel!.name
+        placeDescription.text = placeModel!.shortDescription
     }
     
     @IBAction func playVideo(_ sender: UIButton) {

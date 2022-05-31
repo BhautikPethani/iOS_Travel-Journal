@@ -17,11 +17,7 @@ class PlacesCell: UITableViewCell {
 //    @IBOutlet weak var PlaceDesp: UILabel!
     
     @IBOutlet weak var placeImage: UIImageView!
-    
-   
     @IBOutlet weak var placeName: UILabel!
-    
-    
     @IBOutlet weak var placeDesp: UITextView!
     
     override func awakeFromNib() {

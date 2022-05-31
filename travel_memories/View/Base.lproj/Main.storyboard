@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="304" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5EE-Ka-rTp">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="304" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5EE-Ka-rTp">
                                 <rect key="frame" x="20" y="149" width="374" height="747"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -103,8 +103,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SKj-eF-mNJ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ydy-fA-EZc">
-                                        <rect key="frame" x="0.0" y="-123" width="414" height="1350"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ydy-fA-EZc">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1350"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TajMahal_Image" translatesAutoresizingMaskIntoConstraints="NO" id="fzG-Uz-Atf">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="271"/>
@@ -131,14 +131,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Jan 2022 - Mar 2022)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxF-G7-G81" userLabel="Sub Title">
-                                                <rect key="frame" x="22" y="333" width="153.5" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="40" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnB-91-DHg" userLabel="Description Label">
-                                                <rect key="frame" x="22" y="384" width="363" height="183"/>
+                                                <rect key="frame" x="22" y="353" width="363" height="183"/>
                                                 <string key="text">The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1632 by the Mughal .
 
 University and student-filled cafes. It's also known for its bookshops, including the famed Shakespeare &amp; Company. Family-friendly attractions include the Jardin des.</string>
@@ -147,13 +141,13 @@ University and student-filled cafes. It's also known for its bookshops, includin
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7LI-1h-Wcq" userLabel="Memories Label">
-                                                <rect key="frame" x="22" y="602" width="108" height="29"/>
+                                                <rect key="frame" x="22" y="571" width="108" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mdv-jA-srV" userLabel="Images Collection View">
-                                                <rect key="frame" x="22" y="648" width="363" height="299"/>
+                                                <rect key="frame" x="22" y="617" width="363" height="299"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="299" id="s0h-Lc-HNe"/>
@@ -191,16 +185,16 @@ University and student-filled cafes. It's also known for its bookshops, includin
                                                 </cells>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXT-o8-9Hw" userLabel="Location Label">
-                                                <rect key="frame" x="22" y="984" width="94" height="29"/>
+                                                <rect key="frame" x="22" y="953" width="94" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gbh-BR-NDy" userLabel="Map Container">
-                                                <rect key="frame" x="22" y="1041" width="363" height="196"/>
+                                                <rect key="frame" x="22" y="1010" width="363" height="227"/>
                                                 <subviews>
                                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lev-u5-Zbs">
-                                                        <rect key="frame" x="0.0" y="0.0" width="363" height="196"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="363" height="227"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <integer key="value" value="8"/>
@@ -229,16 +223,14 @@ University and student-filled cafes. It's also known for its bookshops, includin
                                             <constraint firstItem="jXT-o8-9Hw" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="MqD-aw-5u8"/>
                                             <constraint firstAttribute="height" constant="1350" id="NaM-r5-q1i"/>
                                             <constraint firstAttribute="trailing" secondItem="hnB-91-DHg" secondAttribute="trailing" constant="29" id="Oa3-fn-ScC"/>
+                                            <constraint firstItem="hnB-91-DHg" firstAttribute="top" secondItem="iKU-Dr-Jxj" secondAttribute="bottom" constant="22" id="PJt-dF-CyM"/>
                                             <constraint firstItem="YXi-dk-cxe" firstAttribute="centerX" secondItem="fzG-Uz-Atf" secondAttribute="centerX" id="Sj1-T5-B0D"/>
                                             <constraint firstAttribute="bottom" secondItem="Gbh-BR-NDy" secondAttribute="bottom" constant="113" id="UAB-im-Zq0"/>
                                             <constraint firstItem="7LI-1h-Wcq" firstAttribute="top" secondItem="hnB-91-DHg" secondAttribute="bottom" constant="35" id="UJX-ZK-Dbz"/>
                                             <constraint firstItem="jXT-o8-9Hw" firstAttribute="top" secondItem="mdv-jA-srV" secondAttribute="bottom" constant="37" id="Ztd-WN-YhX"/>
-                                            <constraint firstItem="LxF-G7-G81" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="fMd-cL-z7L"/>
                                             <constraint firstItem="iKU-Dr-Jxj" firstAttribute="top" secondItem="fzG-Uz-Atf" secondAttribute="bottom" constant="24" id="fxr-ZW-Dxu"/>
                                             <constraint firstAttribute="trailing" secondItem="fzG-Uz-Atf" secondAttribute="trailing" id="jPP-iI-c2s"/>
-                                            <constraint firstItem="LxF-G7-G81" firstAttribute="top" secondItem="iKU-Dr-Jxj" secondAttribute="bottom" constant="2" id="meK-e3-v2I"/>
                                             <constraint firstAttribute="trailing" secondItem="Gbh-BR-NDy" secondAttribute="trailing" constant="29" id="r4X-PM-Lnh"/>
-                                            <constraint firstItem="hnB-91-DHg" firstAttribute="top" secondItem="LxF-G7-G81" secondAttribute="bottom" constant="33" id="t4p-QD-c7E"/>
                                             <constraint firstItem="mdv-jA-srV" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="uEr-9p-fKH"/>
                                             <constraint firstItem="hnB-91-DHg" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" constant="22" id="v3A-k6-YCx"/>
                                             <constraint firstItem="fzG-Uz-Atf" firstAttribute="leading" secondItem="Ydy-fA-EZc" secondAttribute="leading" id="wZ9-aF-o8K"/>
@@ -268,6 +260,9 @@ University and student-filled cafes. It's also known for its bookshops, includin
                     </view>
                     <connections>
                         <outlet property="imagesCollectionView" destination="mdv-jA-srV" id="BJI-ww-tTI"/>
+                        <outlet property="placeDescription" destination="hnB-91-DHg" id="7N6-LQ-12q"/>
+                        <outlet property="placeName" destination="iKU-Dr-Jxj" id="eEX-ke-LEr"/>
+                        <outlet property="videoThumbnail" destination="fzG-Uz-Atf" id="0Vj-gr-8UT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Epo-Pn-ghg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
