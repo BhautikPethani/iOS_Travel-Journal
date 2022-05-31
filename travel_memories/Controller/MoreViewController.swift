@@ -86,16 +86,24 @@ class MoreViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     @IBAction func playVideo(_ sender: UIButton) {
-        let selectedVideo = "v1";
+//        let selectedVideo = "v1";
+//
+//        let videoPath = Bundle.main.path(forResource: selectedVideo, ofType: "mp4");
         
-        let videoPath = Bundle.main.path(forResource: selectedVideo, ofType: "mp4");
-        let videoPathURL = URL(fileURLWithPath: videoPath!);
-        player = AVPlayer(url: videoPathURL);
-        playerViewController.player = player;
-        
-        self.present(playerViewController, animated: true, completion: {
-            self.playerViewController.player?.play();
-        });
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentDirectorPath:String = paths[0]
+        let imagesDirectoryPath = documentDirectorPath.appending("/ImagePicker")
+        if let videoPath = placeModel!.media.last?.originalUrl {
+            let data = imagesDirectoryPath.appending("/" + videoPath)
+//          print("Data : " + imagesDirectoryPath.appending("/" + videoPath))
+            let videoPathURL = URL(fileURLWithPath: data);
+            player = AVPlayer(url: videoPathURL);
+            playerViewController.player = player;
+
+            self.present(playerViewController, animated: true, completion: {
+                self.playerViewController.player?.play();
+            });
+        }
     }
     
     func displayLocation(latitude: CLLocationDegrees,
