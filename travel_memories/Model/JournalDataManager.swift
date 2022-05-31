@@ -55,6 +55,7 @@ class JournalDataManager {
     }
     
     func saveNewPlace(place: PlacesModel) {
+        
         var newPlaceToSave = place
         newPlaceToSave.id = Date().timeIntervalSince1970.description
         var savedObject = JournalModal.shared
