@@ -411,7 +411,8 @@
 				DEVELOPMENT_TEAM = 55BY82L73C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = travel_memories/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = TravelMemories;
+				INFOPLIST_KEY_CFBundleDisplayName = "Travel Memories";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "You should provide the permission to use this app.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -442,7 +443,8 @@
 				DEVELOPMENT_TEAM = 55BY82L73C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = travel_memories/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = TravelMemories;
+				INFOPLIST_KEY_CFBundleDisplayName = "Travel Memories";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "You should provide the permission to use this app.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
