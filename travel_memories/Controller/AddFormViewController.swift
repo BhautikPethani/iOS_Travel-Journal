@@ -189,7 +189,7 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
             return;
         }
         
-        if (media.count > 3) {
+        if (media.count < 3) {
             showAlert(msg: "Please add at least 3 images")
             return;
         }
