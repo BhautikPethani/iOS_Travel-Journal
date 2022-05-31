@@ -34,16 +34,16 @@ class PlacesCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func setplacecell(Cobject : Places)
-    {
-//        PlaceName.text = Cobject.name
-//        PlaceDesp.text = Cobject.description
-//        PlaceImage.image = UIImage(named: Cobject.image)
-       
-        placeImage.image = UIImage(named: Cobject.image)
-        placeName.text = Cobject.name
-        placeDesp.text = Cobject.description
-    }
+//    func setplacecell(Cobject : Places)
+//    {
+////        PlaceName.text = Cobject.name
+////        PlaceDesp.text = Cobject.description
+////        PlaceImage.image = UIImage(named: Cobject.image)
+//
+//        placeImage.image = UIImage(named: Cobject.image)
+//        placeName.text = Cobject.name
+//        placeDesp.text = Cobject.description
+//    }
     
     
 }

@@ -73,7 +73,6 @@ class JournalDataManager {
     }
 }
 
-
 struct JournalModal {
     var places: [PlacesModel]
     static var shared = JournalModal(ApplicationUserDefaults.value(forKey: .journalData)) {
