@@ -97,54 +97,6 @@ struct JournalModal {
         ApplicationUserDefaults.removeValue(forKey: .journalData)
     }
     
-    
-}
-
-struct PlacesModel {
-    var id: String
-    var name: String
-    var shortDescription: String
-    var latitude: Double
-    var longitude: Double
-    var media: [UploadedMediaModel]
-    var videoURL: URL?
-    
-    init(_ json: JSON = JSON()) {
-        id = json["id"].stringValue
-        name = json["name"].stringValue
-        shortDescription = json["shortDescription"].stringValue
-        latitude = json["latitude"].doubleValue
-        longitude = json["longitude"].doubleValue
-        media = json["media"].arrayValue.map({UploadedMediaModel($0)})
-        videoURL = URL(string: "")
-    }
-    
-    init(id: String,
-         name: String,
-         shortDescription: String,
-         latitude: Double,
-         longitude: Double,
-         media: [UploadedMediaModel],
-         videoURL: URL?) {
-        self.id = id
-        self.name = name
-        self.shortDescription = shortDescription
-        self.latitude = latitude
-        self.longitude = longitude
-        self.media = media
-        self.videoURL = videoURL
-    }
-    
-    func getDictionary() -> [String: Any] {
-        var dict = [String: Any]()
-        dict["id"] = id
-        dict["name"] = name
-        dict["shortDescription"] = shortDescription
-        dict["latitude"] = latitude
-        dict["longitude"] = longitude
-        dict["media"] = media.map({$0.getDictionary()})
-        return dict
-    }
 }
 
 struct UploadedMediaModel {

@@ -169,7 +169,7 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     }
     
     func showAlert(msg: String) {
-        let alert = UIAlertController(title: "Message", message: msg,
+        let alert = UIAlertController(title: "Error!!", message: msg,
                                           preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
             

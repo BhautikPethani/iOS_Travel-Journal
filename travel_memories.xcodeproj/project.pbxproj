@@ -16,7 +16,7 @@
 		552E2B5D283EB47D00AF581E /* AddFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E2B5C283EB47D00AF581E /* AddFormViewController.swift */; };
 		7C15F36F28459FA70077C5EC /* PlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15F36E28459FA70077C5EC /* PlacesCell.swift */; };
 		87B060962845897E002B5F2C /* JournalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B060952845897E002B5F2C /* JournalDataManager.swift */; };
-		87B060982846A942002B5F2C /* AppUserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B060972846A942002B5F2C /* AppUserDefaultsManager.swift */; };
+		87B060982846A942002B5F2C /* PlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B060972846A942002B5F2C /* PlacesModel.swift */; };
 		8C1E467335569461679C9D2D /* Pods_travel_memories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAAF9C884D14A8E9DDE7810E /* Pods_travel_memories.framework */; };
 		ED9EDE792835A745001B7E98 /* JournalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9EDE782835A745001B7E98 /* JournalDetailViewController.swift */; };
 		EDFD85C0283E958F0010B32F /* SubImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFD85BF283E958F0010B32F /* SubImagesCollectionViewCell.swift */; };
@@ -35,7 +35,7 @@
 		552E2B5C283EB47D00AF581E /* AddFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFormViewController.swift; sourceTree = "<group>"; };
 		7C15F36E28459FA70077C5EC /* PlacesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesCell.swift; sourceTree = "<group>"; };
 		87B060952845897E002B5F2C /* JournalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalDataManager.swift; sourceTree = "<group>"; };
-		87B060972846A942002B5F2C /* AppUserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserDefaultsManager.swift; sourceTree = "<group>"; };
+		87B060972846A942002B5F2C /* PlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesModel.swift; sourceTree = "<group>"; };
 		A5104509304116AA1F1DA0FE /* Pods-travel_memories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travel_memories.release.xcconfig"; path = "Target Support Files/Pods-travel_memories/Pods-travel_memories.release.xcconfig"; sourceTree = "<group>"; };
 		BAAF9C884D14A8E9DDE7810E /* Pods_travel_memories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_travel_memories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9EDE782835A745001B7E98 /* JournalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 				EDA46145283FEA99007B273C /* Controller */,
 				EDA46146283FEAF7007B273C /* Model */,
 				EDA46147283FEB09007B273C /* View */,
-				EDA46148283FEB54007B273C /* Componants */,
+				EDA46148283FEB54007B273C /* Cells */,
 				551A6FF028345AB100FDE95A /* AppDelegate.swift */,
 				551A6FF228345AB100FDE95A /* SceneDelegate.swift */,
 				551A6FF928345AB400FDE95A /* Assets.xcassets */,
@@ -118,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				87B060952845897E002B5F2C /* JournalDataManager.swift */,
-				87B060972846A942002B5F2C /* AppUserDefaultsManager.swift */,
+				87B060972846A942002B5F2C /* PlacesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,19 +126,19 @@
 		EDA46147283FEB09007B273C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7C15F36E28459FA70077C5EC /* PlacesCell.swift */,
 				551A6FF628345AB100FDE95A /* Main.storyboard */,
 				551A6FFB28345AB400FDE95A /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		EDA46148283FEB54007B273C /* Componants */ = {
+		EDA46148283FEB54007B273C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				7C15F36E28459FA70077C5EC /* PlacesCell.swift */,
 				EDFD85BF283E958F0010B32F /* SubImagesCollectionViewCell.swift */,
 			);
-			path = Componants;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +259,7 @@
 				551A6FF528345AB100FDE95A /* JournalsViewController.swift in Sources */,
 				551A6FF128345AB100FDE95A /* AppDelegate.swift in Sources */,
 				87B060962845897E002B5F2C /* JournalDataManager.swift in Sources */,
-				87B060982846A942002B5F2C /* AppUserDefaultsManager.swift in Sources */,
+				87B060982846A942002B5F2C /* PlacesModel.swift in Sources */,
 				552E2B5D283EB47D00AF581E /* AddFormViewController.swift in Sources */,
 				7C15F36F28459FA70077C5EC /* PlacesCell.swift in Sources */,
 				ED9EDE792835A745001B7E98 /* JournalDetailViewController.swift in Sources */,
