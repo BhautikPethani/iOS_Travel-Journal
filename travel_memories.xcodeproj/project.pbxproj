@@ -14,7 +14,6 @@
 		551A6FFA28345AB400FDE95A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 551A6FF928345AB400FDE95A /* Assets.xcassets */; };
 		551A6FFD28345AB400FDE95A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551A6FFB28345AB400FDE95A /* LaunchScreen.storyboard */; };
 		552E2B5D283EB47D00AF581E /* AddFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E2B5C283EB47D00AF581E /* AddFormViewController.swift */; };
-		552E2B63283EE00900AF581E /* v1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 552E2B62283EE00900AF581E /* v1.mp4 */; };
 		7C15F36F28459FA70077C5EC /* PlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15F36E28459FA70077C5EC /* PlacesCell.swift */; };
 		87B060962845897E002B5F2C /* JournalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B060952845897E002B5F2C /* JournalDataManager.swift */; };
 		8C1E467335569461679C9D2D /* Pods_travel_memories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAAF9C884D14A8E9DDE7810E /* Pods_travel_memories.framework */; };
@@ -33,7 +32,6 @@
 		551A6FFC28345AB400FDE95A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		551A6FFE28345AB400FDE95A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		552E2B5C283EB47D00AF581E /* AddFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFormViewController.swift; sourceTree = "<group>"; };
-		552E2B62283EE00900AF581E /* v1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = v1.mp4; sourceTree = "<group>"; };
 		7C15F36E28459FA70077C5EC /* PlacesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesCell.swift; sourceTree = "<group>"; };
 		87B060952845897E002B5F2C /* JournalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalDataManager.swift; sourceTree = "<group>"; };
 		A5104509304116AA1F1DA0FE /* Pods-travel_memories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travel_memories.release.xcconfig"; path = "Target Support Files/Pods-travel_memories/Pods-travel_memories.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 		551A6FEF28345AB100FDE95A /* travel_memories */ = {
 			isa = PBXGroup;
 			children = (
-				552E2B64283EE02600AF581E /* videos */,
 				EDA46145283FEA99007B273C /* Controller */,
 				EDA46146283FEAF7007B273C /* Model */,
 				EDA46147283FEB09007B273C /* View */,
@@ -86,14 +83,6 @@
 				551A6FFE28345AB400FDE95A /* Info.plist */,
 			);
 			path = travel_memories;
-			sourceTree = "<group>";
-		};
-		552E2B64283EE02600AF581E /* videos */ = {
-			isa = PBXGroup;
-			children = (
-				552E2B62283EE00900AF581E /* v1.mp4 */,
-			);
-			path = videos;
 			sourceTree = "<group>";
 		};
 		66CFB54E05090A2A0F1FC1C8 /* Pods */ = {
@@ -209,7 +198,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				552E2B63283EE00900AF581E /* v1.mp4 in Resources */,
 				551A6FFD28345AB400FDE95A /* LaunchScreen.storyboard in Resources */,
 				551A6FFA28345AB400FDE95A /* Assets.xcassets in Resources */,
 				551A6FF828345AB100FDE95A /* Main.storyboard in Resources */,
