@@ -8,13 +8,18 @@
 import Foundation
 
 class Places{
+    
+    
+    var description : String
+    var name: String
+    var image : String
+    
+    
     init(description : String , name : String , image : String)
     {
         self.name = name
         self.description = description
         self.image = image
     }
-    var description : String
-    var name: String
-    var image : String
+  
 }
