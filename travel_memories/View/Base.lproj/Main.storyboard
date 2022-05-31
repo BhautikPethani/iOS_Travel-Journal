@@ -260,6 +260,7 @@ University and student-filled cafes. It's also known for its bookshops, includin
                     </view>
                     <connections>
                         <outlet property="imagesCollectionView" destination="mdv-jA-srV" id="BJI-ww-tTI"/>
+                        <outlet property="map" destination="Lev-u5-Zbs" id="kkh-Qy-OHO"/>
                         <outlet property="placeDescription" destination="hnB-91-DHg" id="7N6-LQ-12q"/>
                         <outlet property="placeName" destination="iKU-Dr-Jxj" id="eEX-ke-LEr"/>
                         <outlet property="videoThumbnail" destination="fzG-Uz-Atf" id="0Vj-gr-8UT"/>

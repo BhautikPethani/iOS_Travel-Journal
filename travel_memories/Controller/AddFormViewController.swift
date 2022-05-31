@@ -217,27 +217,3 @@ extension AddFormViewController: UIImagePickerControllerDelegate, UINavigationCo
     }
     
 }
-
-extension ViewController: MKMapViewDelegate {
-    //MARK: - viewFor annotation method
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
-        if annotation is MKUserLocation {
-            return nil
-        }
-        
-        switch annotation.title {
-        case "Current Location":
-            let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "You're Here")
-            annotationView.markerTintColor = UIColor.blue
-            return annotationView
-        case "Place":
-            let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "Visited Place")
-            annotationView.animatesDrop = true
-            annotationView.pinTintColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
-            return annotationView
-        default:
-            return nil
-        }
-    }
-}

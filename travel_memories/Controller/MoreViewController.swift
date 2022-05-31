@@ -9,8 +9,9 @@ import MediaPlayer
 import UIKit
 import AVKit
 import AVFoundation
+import MapKit
 
-class MoreViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class MoreViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, CLLocationManagerDelegate, MKMapViewDelegate {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -33,6 +34,7 @@ class MoreViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var placeName: UILabel!
     @IBOutlet weak var videoThumbnail: UIImageView!
     @IBOutlet weak var imagesCollectionView: UICollectionView!
+    @IBOutlet weak var map: MKMapView!
     
     var media = [UploadedMediaModel]()
     var placeModel: PlacesModel? = nil
@@ -40,12 +42,18 @@ class MoreViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var playerViewController = AVPlayerViewController();
     var imagesDirectoryPath: String?
     
+    var locationMnager = CLLocationManager()
+    var destination: CLLocationCoordinate2D!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        map.isZoomEnabled = true;
+        map.showsUserLocation = true;
+        map.delegate = self
+        
         imagesCollectionView.delegate = self;
         imagesCollectionView.dataSource = self;
-        
         
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentDirectorPath:String = paths[0]
@@ -58,9 +66,11 @@ class MoreViewController: UIViewController, UICollectionViewDelegate, UICollecti
               print("Something went wrong while creating a new folder")
             }
         }
+        
+        setElements()
     }
     
-    func setVideoView(){
+    func setElements(){
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentDirectorPath:String = paths[0]
         let imagesDirectoryPath = documentDirectorPath.appending("/ImagePicker")
@@ -71,6 +81,8 @@ class MoreViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
         placeName.text = placeModel!.name
         placeDescription.text = placeModel!.shortDescription
+        
+        displayLocation(latitude: placeModel!.latitude, longitude: placeModel!.longitude, title: "Place", subtitle: "Visited Place")
     }
     
     @IBAction func playVideo(_ sender: UIButton) {
@@ -84,6 +96,31 @@ class MoreViewController: UIViewController, UICollectionViewDelegate, UICollecti
         self.present(playerViewController, animated: true, completion: {
             self.playerViewController.player?.play();
         });
+    }
+    
+    func displayLocation(latitude: CLLocationDegrees,
+                         longitude: CLLocationDegrees,
+                         title: String,
+                         subtitle: String) {
+        // 2nd step - define span
+        let latDelta: CLLocationDegrees = 0.05
+        let lngDelta: CLLocationDegrees = 0.05
+        
+        let span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lngDelta)
+        // 3rd step is to define the location
+        let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        // 4th step is to define the region
+        let region = MKCoordinateRegion(center: location, span: span)
+        
+        // 5th step is to set the region for the map
+        map.setRegion(region, animated: true)
+        
+        // 6th step is to define annotation
+        let annotation = MKPointAnnotation()
+        annotation.title = title
+        annotation.subtitle = subtitle
+        annotation.coordinate = location
+        map.addAnnotation(annotation)
     }
     
 }
