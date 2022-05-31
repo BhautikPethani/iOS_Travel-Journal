@@ -15,7 +15,6 @@
 		551A6FFD28345AB400FDE95A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551A6FFB28345AB400FDE95A /* LaunchScreen.storyboard */; };
 		552E2B5D283EB47D00AF581E /* AddFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E2B5C283EB47D00AF581E /* AddFormViewController.swift */; };
 		552E2B63283EE00900AF581E /* v1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 552E2B62283EE00900AF581E /* v1.mp4 */; };
-		7C15F36D28459F940077C5EC /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15F36C28459F940077C5EC /* Places.swift */; };
 		7C15F36F28459FA70077C5EC /* PlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15F36E28459FA70077C5EC /* PlacesCell.swift */; };
 		87B060962845897E002B5F2C /* JournalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B060952845897E002B5F2C /* JournalDataManager.swift */; };
 		8C1E467335569461679C9D2D /* Pods_travel_memories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAAF9C884D14A8E9DDE7810E /* Pods_travel_memories.framework */; };
@@ -35,7 +34,6 @@
 		551A6FFE28345AB400FDE95A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		552E2B5C283EB47D00AF581E /* AddFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFormViewController.swift; sourceTree = "<group>"; };
 		552E2B62283EE00900AF581E /* v1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = v1.mp4; sourceTree = "<group>"; };
-		7C15F36C28459F940077C5EC /* Places.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		7C15F36E28459FA70077C5EC /* PlacesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesCell.swift; path = travel_memories/PlacesCell.swift; sourceTree = "<group>"; };
 		87B060952845897E002B5F2C /* JournalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalDataManager.swift; sourceTree = "<group>"; };
 		A5104509304116AA1F1DA0FE /* Pods-travel_memories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travel_memories.release.xcconfig"; path = "Target Support Files/Pods-travel_memories/Pods-travel_memories.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 		551A6FEF28345AB100FDE95A /* travel_memories */ = {
 			isa = PBXGroup;
 			children = (
-				87B060942845895F002B5F2C /* DataBase */,
 				552E2B64283EE02600AF581E /* videos */,
 				EDA46145283FEA99007B273C /* Controller */,
 				EDA46146283FEAF7007B273C /* Model */,
@@ -106,16 +103,7 @@
 				0D0EA25E7A2E49E14245AA25 /* Pods-travel_memories.debug.xcconfig */,
 				A5104509304116AA1F1DA0FE /* Pods-travel_memories.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		87B060942845895F002B5F2C /* DataBase */ = {
-			isa = PBXGroup;
-			children = (
-				87B060952845897E002B5F2C /* JournalDataManager.swift */,
-			);
-			path = DataBase;
 			sourceTree = "<group>";
 		};
 		C0A700B732C456723460A03F /* Frameworks */ = {
@@ -139,7 +127,7 @@
 		EDA46146283FEAF7007B273C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7C15F36C28459F940077C5EC /* Places.swift */,
+				87B060952845897E002B5F2C /* JournalDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,7 +270,6 @@
 				87B060962845897E002B5F2C /* JournalDataManager.swift in Sources */,
 				552E2B5D283EB47D00AF581E /* AddFormViewController.swift in Sources */,
 				7C15F36F28459FA70077C5EC /* PlacesCell.swift in Sources */,
-				7C15F36D28459F940077C5EC /* Places.swift in Sources */,
 				ED9EDE792835A745001B7E98 /* MoreViewController.swift in Sources */,
 				551A6FF328345AB100FDE95A /* SceneDelegate.swift in Sources */,
 				EDFD85C0283E958F0010B32F /* SubImagesCollectionViewCell.swift in Sources */,

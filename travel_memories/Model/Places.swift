@@ -10,12 +10,17 @@ import Foundation
 class Places{
     
     
-    var description : String
+    var id: String
     var name: String
-    var image : String
+    var shortDescription: String
+    var longDescription: String
+    var latitude: Double
+    var longitude: Double
+    var address: String
+    var media: [UploadedMediaModel]
     
     
-    init(description : String , name : String , image : String)
+    init(id: String, name: String, shortDescription: String, longDescription: String, latitude: Double, logitude: Double, address: String, media: [UploadedMediaModel])
     {
         self.name = name
         self.description = description
