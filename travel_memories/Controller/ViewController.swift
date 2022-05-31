@@ -26,7 +26,8 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "MoreView") as! MoreViewController
-       // self.present(nextViewController, animated:true, completion:nil)
+       
+        nextViewController.placeModel = filteredData[indexPath.section]
         navigationController?.pushViewController(nextViewController, animated: true)
     }
 

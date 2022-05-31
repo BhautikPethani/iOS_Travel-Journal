@@ -31,6 +31,7 @@ class MoreViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var imagesCollectionView: UICollectionView!
     var subImages = ["Tajmahal_1","Tajmahal_2","Tajmahal_3"];
     
+    var placeModel: PlacesModel? = nil
     var player = AVPlayer();
     var playerViewController = AVPlayerViewController();
     
