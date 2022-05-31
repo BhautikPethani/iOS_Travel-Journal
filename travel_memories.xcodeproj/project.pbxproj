@@ -15,6 +15,8 @@
 		551A6FFD28345AB400FDE95A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551A6FFB28345AB400FDE95A /* LaunchScreen.storyboard */; };
 		552E2B5D283EB47D00AF581E /* AddFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E2B5C283EB47D00AF581E /* AddFormViewController.swift */; };
 		552E2B63283EE00900AF581E /* v1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 552E2B62283EE00900AF581E /* v1.mp4 */; };
+		7C15F36D28459F940077C5EC /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15F36C28459F940077C5EC /* Places.swift */; };
+		7C15F36F28459FA70077C5EC /* PlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15F36E28459FA70077C5EC /* PlacesCell.swift */; };
 		ED9EDE792835A745001B7E98 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9EDE782835A745001B7E98 /* MoreViewController.swift */; };
 		EDFD85C0283E958F0010B32F /* SubImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFD85BF283E958F0010B32F /* SubImagesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +32,8 @@
 		551A6FFE28345AB400FDE95A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		552E2B5C283EB47D00AF581E /* AddFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFormViewController.swift; sourceTree = "<group>"; };
 		552E2B62283EE00900AF581E /* v1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = v1.mp4; sourceTree = "<group>"; };
+		7C15F36C28459F940077C5EC /* Places.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
+		7C15F36E28459FA70077C5EC /* PlacesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesCell.swift; path = travel_memories/PlacesCell.swift; sourceTree = "<group>"; };
 		ED9EDE782835A745001B7E98 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		EDFD85BF283E958F0010B32F /* SubImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,6 +52,7 @@
 		551A6FE428345AB100FDE95A = {
 			isa = PBXGroup;
 			children = (
+				7C15F36E28459FA70077C5EC /* PlacesCell.swift */,
 				551A6FEF28345AB100FDE95A /* travel_memories */,
 				551A6FEE28345AB100FDE95A /* Products */,
 			);
@@ -98,6 +103,7 @@
 		EDA46146283FEAF7007B273C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7C15F36C28459F940077C5EC /* Places.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,6 +204,8 @@
 				551A6FF528345AB100FDE95A /* ViewController.swift in Sources */,
 				551A6FF128345AB100FDE95A /* AppDelegate.swift in Sources */,
 				552E2B5D283EB47D00AF581E /* AddFormViewController.swift in Sources */,
+				7C15F36F28459FA70077C5EC /* PlacesCell.swift in Sources */,
+				7C15F36D28459F940077C5EC /* Places.swift in Sources */,
 				ED9EDE792835A745001B7E98 /* MoreViewController.swift in Sources */,
 				551A6FF328345AB100FDE95A /* SceneDelegate.swift in Sources */,
 				EDFD85C0283E958F0010B32F /* SubImagesCollectionViewCell.swift in Sources */,
