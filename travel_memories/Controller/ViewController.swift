@@ -22,6 +22,13 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "MoreView") as! MoreViewController
+       // self.present(nextViewController, animated:true, completion:nil)
+        navigationController?.pushViewController(nextViewController, animated: true)
+    }
+    
     // Set the spacing between sections
        func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
            return 5
@@ -87,8 +94,8 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         
         //let storyBoard : UIStoryboard = UIStoryboard(name: view.self, bundle:nil)
         let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "AddForm") as! AddFormViewController
-        self.present(nextViewController, animated:true, completion:nil)
-        
+        //self.present(nextViewController, animated:true, completion:nil)
+        navigationController?.pushViewController(nextViewController, animated: true)
     }
     
 //    var placeModel_1 = PlacesModel(id: "", name: "Taj Mahal", shortDescription:"The Taj Mahal (Jan 2022 - Mar 2022) is an ivory-white marble mausoleum on the right bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1632 by the Mughal ." , latitude: 78.23, longitude: -32, media: [])
