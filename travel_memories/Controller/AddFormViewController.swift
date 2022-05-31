@@ -19,7 +19,9 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     @IBOutlet weak var uploadMediaView: UIView!
     @IBOutlet weak var noMediaView: UIView!
     @IBOutlet weak var imagesCollectionView: UICollectionView!
-    
+    @IBOutlet weak var videoFileName: UILabel!
+    var videoFileURL: String?
+    var addVideoBtn: UIButton!
     var locationMnager = CLLocationManager()
     var destination: CLLocationCoordinate2D!
     var media = [String]();
@@ -46,7 +48,7 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         
         imagesCollectionView.delegate = self;
         imagesCollectionView.dataSource = self;
-
+        videoFileName.isHidden = true
     }
     
     
@@ -55,7 +57,6 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print(indexPath.row);
         let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: "PlaceImages", for: indexPath) as! SubImagesCollectionViewCell
         let data = FileManager.default.contents(atPath: self.media[indexPath.row])
         cell.SubImage.image = UIImage(data: data! as Data)
@@ -149,21 +150,46 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         for m in self.media {
             finalMedia.append(UploadedMediaModel(originalUrl: m, mediaType: 0))
         }
+        if videoFileURL != nil
+        {
+            finalMedia.append(UploadedMediaModel(originalUrl: videoFileURL!, mediaType: 1))
+        }
         placeModel = PlacesModel(id: "", name: placeName.text!, shortDescription: shortDescription.text!, latitude: Location[0], longitude: Location[1], media: finalMedia)
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func selectVideoFile(_ sender: UIButton) {
+        addVideoBtn = sender
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.mediaTypes = ["public.movie"]
+        present(pickerController, animated: true)
     }
     
 }
 
+
 extension AddFormViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        guard let media = info[.imageURL] as? NSURL else { return }
-        self.media.append(media.path!)
-        imagesCollectionView.isHidden = false
-        self.imagesCollectionView.reloadData()
-        noMediaView.isHidden = true
+        let type = info[.mediaType] as! String
+        if type == "public.movie" {
+            guard let media = info[.mediaURL] as? NSURL else { return }
+            videoFileName.isHidden = false
+            addVideoBtn.isHidden = true
+            videoFileName.text =  media.lastPathComponent
+            videoFileURL = media.path
+        } else {
+            guard let media = info[.imageURL] as? NSURL else { return }
+            self.media.append(media.path!)
+            imagesCollectionView.isHidden = false
+            self.imagesCollectionView.reloadData()
+            noMediaView.isHidden = true
+        }
         dismiss(animated: true)
+        
     }
+    
 }
 
 extension ViewController: MKMapViewDelegate {
