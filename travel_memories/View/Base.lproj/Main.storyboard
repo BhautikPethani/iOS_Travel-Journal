@@ -118,9 +118,9 @@
                                                     <constraint firstAttribute="width" constant="57" id="FGw-X7-OZ1"/>
                                                     <constraint firstAttribute="height" constant="56" id="Pbf-mc-bMb"/>
                                                 </constraints>
-                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Button" image="play-button"/>
+                                                <state key="normal" image="play.circle.fill" catalog="system"/>
                                                 <connections>
                                                     <action selector="playVideo:" destination="UWN-Jl-FeD" eventType="touchUpInside" id="M87-f2-adT"/>
                                                 </connections>
@@ -586,7 +586,6 @@ your travel journal</string>
     </scenes>
     <resources>
         <image name="TajMahal_Image" width="3761" height="2821"/>
-        <image name="play-button" width="512" height="512"/>
         <image name="play.circle.fill" catalog="system" width="128" height="121"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
