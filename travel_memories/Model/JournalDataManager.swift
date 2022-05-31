@@ -107,6 +107,7 @@ struct PlacesModel {
     var latitude: Double
     var longitude: Double
     var media: [UploadedMediaModel]
+    var videoURL: URL?
     
     init(_ json: JSON = JSON()) {
         id = json["id"].stringValue
@@ -115,6 +116,7 @@ struct PlacesModel {
         latitude = json["latitude"].doubleValue
         longitude = json["longitude"].doubleValue
         media = json["media"].arrayValue.map({UploadedMediaModel($0)})
+        videoURL = URL(string: "")
     }
     
     init(id: String,
@@ -122,13 +124,15 @@ struct PlacesModel {
          shortDescription: String,
          latitude: Double,
          longitude: Double,
-         media: [UploadedMediaModel]) {
+         media: [UploadedMediaModel],
+         videoURL: URL?) {
         self.id = id
         self.name = name
         self.shortDescription = shortDescription
         self.latitude = latitude
         self.longitude = longitude
         self.media = media
+        self.videoURL = videoURL
     }
     
     func getDictionary() -> [String: Any] {

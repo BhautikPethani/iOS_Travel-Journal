@@ -71,14 +71,30 @@ class MoreViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func setElements(){
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let documentDirectorPath:String = paths[0]
-        let imagesDirectoryPath = documentDirectorPath.appending("/ImagePicker")
-        if let m = placeModel!.media.first?.originalUrl {
-            if let data = FileManager.default.contents(atPath: imagesDirectoryPath.appending("/" + m)) {
-                videoThumbnail.image = UIImage(data: data)
+   
+        if let url = placeModel!.videoURL {
+            DispatchQueue.global().async {
+                let asset = AVAsset(url: url)
+             let assetImgGenerate : AVAssetImageGenerator = AVAssetImageGenerator(asset: asset)
+             assetImgGenerate.appliesPreferredTrackTransform = true
+                let time = CMTimeMake(value: 1, timescale: 2)
+             let img = try? assetImgGenerate.copyCGImage(at: time, actualTime: nil)
+             if img != nil {
+                            let frameImg  = UIImage(cgImage: img!)
+                            DispatchQueue.main.async(execute: {
+                            // assign your image to UIImageView
+                                
+                                self.videoThumbnail.image = frameImg
+                                self.videoThumbnail.contentMode = .scaleAspectFill
+                            })
+                    }
             }
+            
+            
         }
+        
+        
+        
         placeName.text = placeModel!.name
         placeDescription.text = placeModel!.shortDescription
         

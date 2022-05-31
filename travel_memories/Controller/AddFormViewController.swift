@@ -206,7 +206,7 @@ class AddFormViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         {
             finalMedia.append(UploadedMediaModel(originalUrl: videoFileURL!, mediaType: 1))
         }
-        placeModel = PlacesModel(id: "", name: placeName.text!, shortDescription: shortDescription.text!, latitude: Location[0], longitude: Location[1], media: finalMedia)
+        placeModel = PlacesModel(id: "", name: placeName.text!, shortDescription: shortDescription.text!, latitude: Location[0], longitude: Location[1], media: finalMedia, videoURL: videoFileLink)
         JournalDataManager.shared.saveNewPlace(place: placeModel!)
         navigationController?.popViewController(animated: true)
     }
@@ -269,7 +269,7 @@ extension AddFormViewController: UIImagePickerControllerDelegate, UINavigationCo
             self.media.append(media.lastPathComponent!)
             imagesCollectionView.isHidden = false
             self.imagesCollectionView.reloadData()
-            noMediaView.isHidden = true
+//            noMediaView.isHidden = true
         }
         dismiss(animated: true)
         
