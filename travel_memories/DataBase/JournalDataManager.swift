@@ -9,6 +9,8 @@
 import UIKit
 import SwiftyJSON
 
+typealias JSONDictionary = [String: Any]
+
 enum ApplicationUserDefaults {
     
     enum Key: String {
